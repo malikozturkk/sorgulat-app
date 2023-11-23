@@ -3,6 +3,7 @@ import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
 import Button from "components/DesignSystem/Button";
 import Input from "components/DesignSystem/Input";
+import Checkbox from "components/DesignSystem/Checkbox";
 
 const HomePage = () => {
   const { t } = useTranslation("common");
@@ -33,6 +34,9 @@ const HomePage = () => {
         shape="default"
         status="error"
       />
+      Cinsiyet Seç
+      <Checkbox label="erkek" />
+      <Checkbox label="kadın" />
     </div>
   );
 };
