@@ -2,6 +2,7 @@ import React from "react";
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
 import Button from "components/DesignSystem/Button";
+import Input from "components/DesignSystem/Input";
 
 const HomePage = () => {
   const { t } = useTranslation("common");
@@ -17,6 +18,20 @@ const HomePage = () => {
         shape="default"
         palette="red"
         disabled
+      />
+      <Input
+        icon={
+          <img
+            src="https://cdn3.iconfinder.com/data/icons/feather-5/24/search-512.png"
+            height={20}
+            width={20}
+          />
+        }
+        placeholder="Ürün veya Kategori Ara"
+        label="Ara"
+        errorMessage="Sonuç bulunamadı"
+        shape="default"
+        status="error"
       />
     </div>
   );
