@@ -69,7 +69,7 @@ export const Label = styled.div<{ labelColor: ColorValueHex, status: InputMessag
   flex: 1 1 0%;
   cursor: pointer;
   color: ${props => props?.labelColor ?? 'rgb(19, 23, 23)'};
-  ${props => variant({ prop: 'status', variants: statusMessage(props) } ?? 'rgb(19, 23, 23)')};
+  ${props => variant({ prop: 'status', variants: statusMessage() } ?? 'rgb(19, 23, 23)')};
   color: ${props => (props?.hover && !props?.checked) && lighten(0.30, props?.labelColor ?? 'rgb(19, 23, 23)')};
   line-height: 24px;
 `
@@ -83,7 +83,7 @@ export const MessageMain = styled.div`
 
 export const Message = styled.div<{status: InputMessageType}>`
   color: rgb(19, 23, 23);
-  ${props => variant({ prop: 'status', variants: statusMessage(props) } ?? 'rgb(19, 23, 23)')}
+  ${props => variant({ prop: 'status', variants: statusMessage() } ?? 'rgb(19, 23, 23)')}
   font-size: 12px;
   line-height: 1.5;
 `
