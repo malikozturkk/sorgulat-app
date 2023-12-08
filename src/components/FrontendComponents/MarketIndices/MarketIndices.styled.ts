@@ -5,7 +5,9 @@ export const MainMarket = styled.div`
   width: 100%;
   min-height: 62.5px;
   background-color: #fff;
-  box-shadow: 0px 4px 24px rgb(88 102 126 / 8%), 0px 1px 2px rgb(88 102 126 / 12%);
+  box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.08);
+    border: 1px solid transparent;
+    border-radius: 8px;
 `
 
 export const Container = styled.div`

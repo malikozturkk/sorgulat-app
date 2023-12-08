@@ -8,6 +8,8 @@ import Radio from "components/DesignSystem/Radio";
 import Image from "next/image";
 import MarketIndices from "components/FrontendComponents/MarketIndices";
 import BankPromotion from "components/FrontendComponents/BankPromotion";
+import Container from "components/DesignSystem/Container";
+import { useIsMobile } from "hooks/useIsMobile";
 
 const HomePage = () => {
   const { t } = useTranslation("common");
@@ -16,55 +18,58 @@ const HomePage = () => {
     setCheckedOption(optionValue);
   };
   const router = useRouter();
-
+  const isMobile = useIsMobile();
   return (
     <>
-      <MarketIndices />
-      <BankPromotion />
-      <div>
-        {t("homepage.title")}
-        <div>Homepage {router.locale}</div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: 50,
-            marginTop: 20,
-          }}
-        >
-          <Button
-            text="test button"
-            size="large"
-            shape="ghost"
-            palette="red"
-            disabled
-          />
-          <Input
-            placeholder="Ürün veya Kategori Ara"
-            label="Ara"
-            errorMessage="Sonuç bulunamadı"
-            shape="default"
-            status="error"
-          />
-          <div>
-            Cinsiyet Seç
-            <Checkbox label="erkek" />
-            <Checkbox label="kadın" />
-          </div>
-          <div>
-            <Radio
-              label="erkek"
-              checked={checkedOption === "option1"}
-              onChange={() => handleRadioChange("option1")}
+      {!isMobile && <MarketIndices />}
+      <Container>
+        {isMobile && <MarketIndices />}
+        <BankPromotion />
+        <div>
+          {t("homepage.title")}
+          <div>Homepage {router.locale}</div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: 50,
+              marginTop: 20,
+            }}
+          >
+            <Button
+              text="test button"
+              size="large"
+              shape="ghost"
+              palette="red"
+              disabled
             />
-            <Radio
-              label="kadın"
-              checked={checkedOption === "option2"}
-              onChange={() => handleRadioChange("option2")}
+            <Input
+              placeholder="Ürün veya Kategori Ara"
+              label="Ara"
+              errorMessage="Sonuç bulunamadı"
+              shape="default"
+              status="error"
             />
+            <div>
+              Cinsiyet Seç
+              <Checkbox label="erkek" />
+              <Checkbox label="kadın" />
+            </div>
+            <div>
+              <Radio
+                label="erkek"
+                checked={checkedOption === "option1"}
+                onChange={() => handleRadioChange("option1")}
+              />
+              <Radio
+                label="kadın"
+                checked={checkedOption === "option2"}
+                onChange={() => handleRadioChange("option2")}
+              />
+            </div>
           </div>
         </div>
-      </div>
+      </Container>
     </>
   );
 };

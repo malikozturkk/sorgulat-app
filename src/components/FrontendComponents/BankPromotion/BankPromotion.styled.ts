@@ -1,19 +1,23 @@
 import styled from 'styled-components';
 import { darken, lighten } from 'polished';
 
-export const CardMain = styled.div`
-  padding: 16px;
-  box-shadow: 0px 7px 24px rgba(20,20,43,.05);
-  border: 1px solid transparent;
+export const BankPromotionMain = styled.div`
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 16px;
+  margin-top: 8px;
+`
+
+export const CardContainer = styled.div`
+  box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.08);
+  padding: 16px;
+  border: 1px solid transparent;
   border-radius: 8px;
-  width: 808px;
+  width: 100%;
   @media (max-width: 768px) { 
     padding: 16px;
-    flex-direction: column;
-    width: 100%;
   }
   &:not(:last-child) {
     margin-bottom: 12px;
@@ -23,10 +27,22 @@ export const CardMain = styled.div`
   }
 `
 
+export const CardMain = styled.div`
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  @media (max-width: 768px) { 
+    align-items: flex-start;
+  }
+`
+
 export const InfoMain = styled.div`
   display: flex;
   gap: 16px;
   flex: 1 1 0%;
+  @media (max-width: 768px) { 
+    margin-top: 16px;
+  }
 `
 
 export const Infos = styled.div`
@@ -38,11 +54,14 @@ export const BankInfo = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 16px;
+  gap: 2px;
+  @media (max-width: 768px) { 
+    gap: 8px;
+  }
 `
 
 export const BankName = styled.div`
   line-height: 22px;
-  margin-bottom: 2px;
   color: #0E0F11;
   font-weight: 700;
   font-size: 16px;
@@ -53,12 +72,19 @@ export const Description = styled.div`
   color: #363940;
   font-weight: 600;
   font-size: 14px;
+  @media (max-width: 768px) { 
+    margin-bottom: 16px;
+  }
 `
 
 export const BenefitCard = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  gap: 16px;
+  @media (max-width: 768px) { 
+    gap: 20px;
+  }
 `
 
 export const Info = styled.div`
@@ -67,7 +93,6 @@ export const Info = styled.div`
 `
 
 export const Benefits = styled.div`
-  margin-top: 16px;
   display: flex;
   width: 100%;
 `
@@ -115,6 +140,7 @@ export const BenefitMain = styled.div`
   }
   @media (max-width: 768px) { 
     flex: 1 1 0%;
+    padding: 0 12px;
   }
 `
 
@@ -136,6 +162,10 @@ export const ApplyMain = styled.div`
   display: flex;
   flex-direction: column;
   width: auto;
+  @media (max-width: 768px) { 
+    margin-top: 20px;
+    align-items: center;
+  }
 `
 
 export const DetailMain = styled.div`
