@@ -47,9 +47,9 @@ export const shapes = (props) => {
     }
 }
 
-export const StyledButton = styled.button<{ shape: 'default' | 'ghost' | 'outline', block: boolean, size: ButtonSizes, palette: ColorValueHex, padding: string, disabled: boolean }>`
+export const StyledButton = styled.button<{ shape: 'default' | 'ghost' | 'outline', block: boolean, size: ButtonSizes, palette: ColorValueHex, padding: string, disabled: boolean, fontSize: string | number }>`
   background-color: ${props => (props?.shape === 'default' ? props?.palette ?? 'black' : 'transparent')};
-  border-radius: 4px;
+  border-radius: 8px;
   padding: ${props => (props?.padding ?? '10px 24px')};
   font-weight: 700;
   color: #fff;
@@ -71,6 +71,7 @@ export const StyledButton = styled.button<{ shape: 'default' | 'ghost' | 'outlin
   border-style: ${props => (props?.shape == 'outline' ? 'solid' : 'none')};
   ${props => variant({ prop: 'size', variants: sizes(props) })}
   ${props => variant({ prop: 'shape', variants: shapes(props) })}
+  font-size: ${props => (props?.fontSize)};;
 
   &:disabled {
     cursor: not-allowed;
@@ -78,7 +79,7 @@ export const StyledButton = styled.button<{ shape: 'default' | 'ghost' | 'outlin
     color: ${props => lighten(0.30, props?.palette ?? 'black') };
   }
   &:not(:disabled):hover {
-    background-color: ${props => props?.shape === 'default' ? darken(0.10, props?.palette ?? 'black') : lighten(0.465, props?.palette ?? 'black') };
+    background-color: ${props => props?.shape === 'default' ? darken(0.07, props?.palette ?? 'black') : lighten(0.465, props?.palette ?? 'black') };
     border-color: ${props => (props?.palette ?? 'black')};
   }
 `;

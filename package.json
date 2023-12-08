@@ -4,11 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:next": "next dev -p 3000",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@svgr/webpack": "^8.1.0",
+    "axios": "^1.6.2",
     "babel-plugin-styled-components": "^2.1.4",
     "i18next": "^23.7.6",
     "i18next-browser-languagedetector": "^7.2.0",
@@ -20,7 +23,10 @@
     "react": "^18",
     "react-dom": "^18",
     "react-i18next": "^13.5.0",
+    "react-query": "^3.39.3",
+    "styled-breakpoints": "^12.1.9",
     "styled-components": "^6.1.1",
+    "styled-components-breakpoint": "^3.0.0-preview.20",
     "styled-system": "^5.1.5",
     "styled-tools": "^1.7.2"
   },
@@ -29,7 +35,7 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
-    "eslint-config-next": "14.0.3",
+    "eslint-config-next": "^14.0.3",
     "typescript": "^5"
   }
 }

@@ -16,7 +16,7 @@ const Input = (props: IInput) => {
     props;
   const [focused, setFocused] = React.useState(false);
   return (
-    <>
+    <div>
       <InputMain focused={focused} shape={shape} status={status}>
         <InputLabel>
           <Label focused={focused} icon={icon} status={status}>
@@ -27,7 +27,7 @@ const Input = (props: IInput) => {
           {icon && <Icon>{icon}</Icon>}
           <StyledInput
             type="text"
-            placeholder={focused && placeholder}
+            placeholder={focused ? placeholder : undefined}
             onFocus={() => setFocused(true)}
             onBlur={(e) => setFocused(e.target.value.length > 0 ? true : false)}
           />
@@ -38,7 +38,7 @@ const Input = (props: IInput) => {
           <ErrorMessage status={status}>{errorMessage}</ErrorMessage>
         </ErrorMessageMain>
       )}
-    </>
+    </div>
   );
 };
 

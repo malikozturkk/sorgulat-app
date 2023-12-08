@@ -13,22 +13,22 @@ const Button = (props: IButton) => {
     padding,
     onClick,
     disabled,
+    fontSize,
   } = props;
 
   return (
-    <div>
-      <StyledButton
-        onClick={onClick}
-        block={block}
-        size={size}
-        shape={shape}
-        palette={palette}
-        padding={padding}
-        disabled={disabled}
-      >
-        {text} {icon}
-      </StyledButton>
-    </div>
+    <StyledButton
+      onClick={onClick}
+      block={block}
+      size={size}
+      shape={shape}
+      palette={palette}
+      padding={padding}
+      disabled={disabled}
+      fontSize={fontSize}
+    >
+      {text} {icon}
+    </StyledButton>
   );
 };
 

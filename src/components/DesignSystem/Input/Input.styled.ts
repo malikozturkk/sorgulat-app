@@ -73,7 +73,6 @@ export const InputMain = styled.label<{ focused: boolean, shape: FormItemShape, 
   background-color: rgb(255, 255, 255);
   outline-offset: -2px;
   transition-duration: 0.15s;
-  width: 100%;
   text-align: left;
   display: inline-flex;
   align-items: center;

@@ -15,4 +15,5 @@ export interface IButton {
   padding?: string;
   onClick?: (e?: React.MouseEvent<HTMLButtonElement, MouseEvent>, key?: string | number) => void;
   disabled?: boolean;
+  fontSize?: string | number
 }

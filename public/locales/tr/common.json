@@ -1,5 +1,16 @@
 {
     "homepage": {
         "title": "TR Title"    
+    },
+    "marketIndices": {
+        "USD": "DOLAR",
+        "EUR": "EURO",
+        "GBP": "POUND",
+        "GA": "GRAM",
+        "C": "ÇEYREK",
+        "GAG": "BİLİNMİYOR",
+        "BTC": "BİTCOİN",
+        "ETH": "ETHEREUM",
+        "XU100": "BIST 100"
     }
 }
