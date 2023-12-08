@@ -60,8 +60,8 @@ const BankPromotion = () => {
                   </S.BankInfo>
                   <S.BenefitCard>
                     <S.Info>
-                      {item.infos.map((info) => (
-                        <S.InfoItem color={item.color}>
+                      {item.infos.map((info, index) => (
+                        <S.InfoItem color={item.color} key={index}>
                           <S.InfoIcon color={item.color}>
                             <Megaphone color="#fff" fill="#fff" />
                           </S.InfoIcon>
@@ -70,8 +70,8 @@ const BankPromotion = () => {
                       ))}
                     </S.Info>
                     <S.Benefits>
-                      {item.benefits.map((b) => (
-                        <S.BenefitMain>
+                      {item.benefits.map((b, index) => (
+                        <S.BenefitMain key={index}>
                           <S.Benefit>{b.benefit}</S.Benefit>
                           <S.BenefitValue>{b.value}</S.BenefitValue>
                         </S.BenefitMain>
