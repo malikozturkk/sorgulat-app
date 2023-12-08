@@ -13,6 +13,7 @@ export const CardMain = styled.div`
   @media (max-width: 768px) { 
     padding: 16px;
     flex-direction: column;
+    width: 100%;
   }
   &:not(:last-child) {
     margin-bottom: 12px;
@@ -111,6 +112,9 @@ export const BenefitMain = styled.div`
   }
   &:not(:last-child) {
     border-right: 1px solid #D8D8D8;
+  }
+  @media (max-width: 768px) { 
+    flex: 1 1 0%;
   }
 `
 
