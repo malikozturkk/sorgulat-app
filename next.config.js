@@ -5,9 +5,6 @@ module.exports = {
   compiler: {
     styledComponents: true,
   },
-  images: {
-    domains: ['cdn3.iconfinder.com'],
-  },
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,

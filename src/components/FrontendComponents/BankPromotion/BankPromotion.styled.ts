@@ -9,6 +9,7 @@ export const CardMain = styled.div`
   align-items: center;
   flex-wrap: wrap;
   border-radius: 8px;
+  width: 808px;
   @media (max-width: 768px) { 
     padding: 16px;
     flex-direction: column;

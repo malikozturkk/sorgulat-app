@@ -40,14 +40,6 @@ const HomePage = () => {
             disabled
           />
           <Input
-            icon={
-              <Image
-                src="https://cdn3.iconfinder.com/data/icons/feather-5/24/search-512.png"
-                height={20}
-                width={20}
-                alt="test"
-              />
-            }
             placeholder="Ürün veya Kategori Ara"
             label="Ara"
             errorMessage="Sonuç bulunamadı"

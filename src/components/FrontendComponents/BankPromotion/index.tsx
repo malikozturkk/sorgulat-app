@@ -18,19 +18,6 @@ const eytBankPromotion = async () => {
 
 const BankPromotion = () => {
   const { data, isLoading } = useQuery("bankPromotion", eytBankPromotion);
-  const [isMobile, setIsMobile] = React.useState(window.innerWidth <= 768); // Örnek bir eşik değeri, mobil için 768 pikseldir.
-
-  React.useEffect(() => {
-    function handleResize() {
-      setIsMobile(window.innerWidth <= 768);
-    }
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
   return (
     <div
       style={{
@@ -81,26 +68,24 @@ const BankPromotion = () => {
                 </S.Infos>
               </S.InfoMain>
               <S.ApplyMain>
-                {!isMobile && (
-                  <S.QrMain>
-                    <S.CameraMain>
-                      <div>
-                        <Camera width={14} height={14} />
-                        <ArrowRight width={14} height={14} />
-                      </div>
-                      <span>QR Okut, Fırsatı Yakala!</span>
-                    </S.CameraMain>
-                    <img
-                      alt="İş Bankası"
-                      loading="lazy"
-                      width="80"
-                      height="80"
-                      decoding="async"
-                      data-nimg="1"
-                      src="https://cdn.hangikredi.com/images/retirementbanking/d8099bef-155d-4c92-b849-399f721ae883.svg"
-                    />
-                  </S.QrMain>
-                )}
+                <S.QrMain>
+                  <S.CameraMain>
+                    <div>
+                      <Camera width={14} height={14} />
+                      <ArrowRight width={14} height={14} />
+                    </div>
+                    <span>QR Okut, Fırsatı Yakala!</span>
+                  </S.CameraMain>
+                  <Image
+                    alt="İş Bankası"
+                    loading="lazy"
+                    width="80"
+                    height="80"
+                    decoding="async"
+                    data-nimg="1"
+                    src="https://cdn.hangikredi.com/images/retirementbanking/d8099bef-155d-4c92-b849-399f721ae883.svg"
+                  />
+                </S.QrMain>
                 <S.DetailMain>
                   <Button
                     text="Maaşını Taşı!"

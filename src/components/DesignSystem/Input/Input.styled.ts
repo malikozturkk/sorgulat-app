@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 import { FormItemShape, InputMessageType } from './Input.types';
 import { variant } from 'styled-system';
 
-export const status = (props) => {
+export const status = (props: any) => {
     return {
         error: {
             outlineColor: '#E12424',
@@ -24,7 +24,7 @@ export const status = (props) => {
 }
 
 
-export const statusMessage = (props) => {
+export const statusMessage = () => {
     return {
         error: {
             color: '#E12424',
@@ -47,7 +47,7 @@ export const InputLabel = styled.div`
 `
 
 export const Label = styled.div<{ focused: boolean, icon: ReactNode | JSX.Element | string, status: InputMessageType }>`
-  ${props => variant({ prop: 'status', variants: statusMessage(props) })}
+  ${props => variant({ prop: 'status', variants: statusMessage() })}
   background-color: rgb(255, 255, 255);
   border-radius: 4px;
   display: inline-flex;
@@ -127,7 +127,7 @@ export const ErrorMessageMain = styled.div`
 `
 
 export const ErrorMessage = styled.div<{ status: InputMessageType }>`
-  ${props => variant({ prop: 'status', variants: statusMessage(props) })}
+  ${props => variant({ prop: 'status', variants: statusMessage() })}
   font-size: 12px;
   line-height: 1.5;
 `

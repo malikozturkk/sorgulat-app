@@ -27,7 +27,7 @@ export const sizes = (props) => {
     }
 }
 
-export const shapes = (props) => {
+export const shapes = (props: any) => {
     return {
         default: {
             backgroundColor: props?.palette ?? 'black',
