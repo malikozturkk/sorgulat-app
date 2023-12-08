@@ -16,6 +16,7 @@ export const CardContainer = styled.div`
   border: 1px solid transparent;
   border-radius: 8px;
   width: 100%;
+  background-color: #fff;
   @media (max-width: 768px) { 
     padding: 16px;
   }

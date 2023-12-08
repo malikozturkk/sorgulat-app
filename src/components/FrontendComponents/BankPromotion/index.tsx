@@ -22,7 +22,7 @@ const BankPromotion = () => {
       {isLoading
         ? "loading"
         : data.map((item, index) => (
-            <S.CardContainer>
+            <S.CardContainer key={index}>
               {isMobile ? (
                 <BankPromotionMobile item={item} index={index} />
               ) : (
