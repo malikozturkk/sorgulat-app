@@ -12,11 +12,10 @@ import SkeletonLoader from "./SkeletonLoader";
 import { API } from "services/finance";
 import { formatPrice } from "utils/formatPrice";
 
-const proxyUrl = "https://cors-anywhere.herokuapp.com/";
 const apiUrl = "https://api.genelpara.com/embed/altin.json";
 const fetchData = async () => {
   try {
-    const response = await axios.get(proxyUrl + apiUrl);
+    const response = await axios.get(apiUrl);
     return response.data;
   } catch (error) {
     return error;
