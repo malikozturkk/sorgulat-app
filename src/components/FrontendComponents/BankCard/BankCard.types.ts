@@ -1,6 +1,7 @@
-export interface IBankPromotion {
+export interface IBankCard {
     bankName: string;
     description: string
+    buttonText: string;
     applicationUrl: string;
     imageUrl: string;
     color: string;

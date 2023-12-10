@@ -2,10 +2,11 @@
 import HomePage from '../components/Homepage'
 import Faq from '../components/Faq'
 import RetirementBanking from 'components/RetirementBanking'
+import BecomeCustomer from 'components/BecomeCustomer'
 
 export const PAGE_MAP = {
-  tr: { Main: `/`, Faq: `/sikca-sorulan-sorular`, RetirementBanking: '/emekli-bankaciligi' },
-  en: { Main: `/`, Faq: `/faq`, RetirementBanking: '/retirement-banking' },
+  tr: { Main: `/`, Faq: `/sikca-sorulan-sorular`, RetirementBanking: '/emekli-bankaciligi', BecomeCustomer: '/bankalarin-musterisi-ol' },
+  en: { Main: `/`, Faq: `/faq`, RetirementBanking: '/retirement-banking', BecomeCustomer: '/become-customer' },
 }
 
 const PAGE_TO_COMPONENT_MAP = (locale: string) => {
@@ -14,7 +15,8 @@ const PAGE_TO_COMPONENT_MAP = (locale: string) => {
   return {
     [PAGE.Main]: HomePage,
     [PAGE.Faq]: Faq,
-    [PAGE.RetirementBanking]: RetirementBanking
+    [PAGE.RetirementBanking]: RetirementBanking,
+    [PAGE.BecomeCustomer]: BecomeCustomer
   }
 }
 

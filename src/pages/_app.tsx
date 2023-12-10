@@ -5,6 +5,9 @@ import { ThemeProvider } from "styled-components";
 import { theme } from "../utils/theme";
 import { createGlobalStyle } from "styled-components";
 import { QueryClient, QueryClientProvider } from "react-query";
+import Header from "components/FrontendComponents/Header";
+import { DefaultDesktopNavigationItems } from "components/FrontendComponents/Header/Header.data";
+import SorgulatLogo from "../components/Icons/svg/sorgulat-logo.svg";
 
 const GlobalStyles = createGlobalStyle`
 html,
@@ -20,6 +23,13 @@ function MyApp({ Component, pageProps }: AppProps) {
     <QueryClientProvider client={queryClient}>
       <ThemeProvider theme={theme}>
         <GlobalStyles />
+        <Header
+          desktopNavigationItems={DefaultDesktopNavigationItems}
+          logo={{
+            url: "/",
+            svg: <SorgulatLogo />,
+          }}
+        />
         <Component {...pageProps} />
       </ThemeProvider>
     </QueryClientProvider>

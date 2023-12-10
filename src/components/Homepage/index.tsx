@@ -5,14 +5,9 @@ import Button from "components/DesignSystem/Button";
 import Input from "components/DesignSystem/Input";
 import Checkbox from "components/DesignSystem/Checkbox";
 import Radio from "components/DesignSystem/Radio";
-import Image from "next/image";
 import MarketIndices from "components/FrontendComponents/MarketIndices";
-import BankPromotion from "components/FrontendComponents/BankPromotion";
 import Container from "components/DesignSystem/Container";
 import { useIsMobile } from "hooks/useIsMobile";
-import Header from "components/FrontendComponents/Header";
-import SorgulatLogo from "../Icons/svg/sorgulat-logo.svg";
-import { DefaultDesktopNavigationItems } from "components/FrontendComponents/Header/Header.data";
 
 const HomePage = () => {
   const { t } = useTranslation("common");
@@ -24,13 +19,6 @@ const HomePage = () => {
   const isMobile = useIsMobile();
   return (
     <>
-      <Header
-        desktopNavigationItems={DefaultDesktopNavigationItems}
-        logo={{
-          url: "/",
-          svg: <SorgulatLogo />,
-        }}
-      />
       {!isMobile && <MarketIndices />}
       <Container>
         {isMobile && <MarketIndices />}

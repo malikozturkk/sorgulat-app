@@ -1,7 +1,7 @@
 import { CreateAPI } from '../../helpers/CreateAPI'
 import { IMarketIndices } from 'components/FrontendComponents/MarketIndices/MarketIndices.types'
 import { FinanceGlobalErrorHandler, FinanceGlobalResponseHandler } from './helper/response-helper'
-import { bankPromotionData } from './statik-data'
+import { bankPromotionData, becomeCustomerData } from './statik-data'
 
 export function FinanceCoreAPI<T>() {
   const api = CreateAPI()
@@ -17,6 +17,10 @@ export const getMarketIndices = async () => {
 
 export const getEytBankPromotion = async () => {
   return bankPromotionData
+}
+
+export const getBecomeCustomer = async () => {
+  return becomeCustomerData
 }
 
 export const SelectOldFlights = async (params) => {

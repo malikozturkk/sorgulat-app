@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { darken, lighten } from 'polished';
 
-export const BankPromotionMain = styled.div`
+export const BankCardMain = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;

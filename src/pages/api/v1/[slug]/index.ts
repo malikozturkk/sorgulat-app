@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { getMarketIndices, getEytBankPromotion } from 'services/finance'
+import { getMarketIndices, getEytBankPromotion, getBecomeCustomer } from 'services/finance'
 
 interface ApiConfig {
   method: 'POST' | 'GET'
@@ -9,6 +9,7 @@ interface ApiConfig {
 const API_MAPS: Record<string, ApiConfig> = {
   'market-indices': { service: getMarketIndices, method: 'GET' },
   'eyt-bank-promotion': { service: getEytBankPromotion, method: 'GET' },
+  'become-customer': { service: getBecomeCustomer, method: 'GET' },
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {

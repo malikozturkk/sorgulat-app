@@ -1,10 +1,10 @@
 import * as React from "react";
 import Image from "next/image";
 import Button from "components/DesignSystem/Button";
-import * as S from "./BankPromotion.styled";
+import * as S from "./BankCard.styled";
 import Megaphone from "../../Icons/svg/megaphone.svg";
 
-const BankPromotionMobile = (props) => {
+const BankCardMobile = (props) => {
   const { item, index } = props;
   return (
     <>
@@ -49,7 +49,7 @@ const BankPromotionMobile = (props) => {
       <S.ApplyMain>
         <S.DetailMain>
           <Button
-            text="Maaşını Taşı!"
+            text={item.buttonText}
             size="default"
             shape="default"
             palette={item.color}
@@ -70,4 +70,4 @@ const BankPromotionMobile = (props) => {
   );
 };
 
-export default BankPromotionMobile;
+export default BankCardMobile;

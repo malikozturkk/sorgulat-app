@@ -1,12 +1,12 @@
 import * as React from "react";
 import Image from "next/image";
 import Button from "components/DesignSystem/Button";
-import * as S from "./BankPromotion.styled";
+import * as S from "./BankCard.styled";
 import Megaphone from "../../Icons/svg/megaphone.svg";
 import Camera from "../../Icons/svg/camera.svg";
 import ArrowRight from "../../Icons/svg/arrowRight.svg";
 
-const BankPromotionDesktop = (props) => {
+const BankCardDesktop = (props) => {
   const { item, index } = props;
   return (
     <S.CardMain key={index}>
@@ -17,6 +17,7 @@ const BankPromotionDesktop = (props) => {
             alt={`${item.bankName}`}
             width={72}
             height={72}
+            style={{ borderRadius: "8px" }}
           />
         </div>
         <S.Infos>
@@ -67,7 +68,7 @@ const BankPromotionDesktop = (props) => {
         </S.QrMain>
         <S.DetailMain>
           <Button
-            text="Maaşını Taşı!"
+            text={item.buttonText}
             size="default"
             shape="default"
             palette={item.color}
@@ -88,4 +89,4 @@ const BankPromotionDesktop = (props) => {
   );
 };
 
-export default BankPromotionDesktop;
+export default BankCardDesktop;
