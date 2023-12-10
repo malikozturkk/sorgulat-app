@@ -51,7 +51,7 @@ const BankPromotionDesktop = (props) => {
           <S.CameraMain>
             <div>
               <Camera width={14} height={14} />
-              <ArrowRight width={14} height={14} />
+              <ArrowRight width={14} height={14} color="#898989" />
             </div>
             <span>QR Okut, Fırsatı Yakala!</span>
           </S.CameraMain>
