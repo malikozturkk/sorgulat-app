@@ -8,6 +8,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import Header from "components/FrontendComponents/Header";
 import { DefaultDesktopNavigationItems } from "components/FrontendComponents/Header/Header.data";
 import SorgulatLogo from "../components/Icons/svg/sorgulat-logo.svg";
+import Head from "next/head";
 
 const GlobalStyles = createGlobalStyle`
 html,
@@ -20,19 +21,28 @@ body {
 function MyApp({ Component, pageProps }: AppProps) {
   const queryClient = new QueryClient();
   return (
-    <QueryClientProvider client={queryClient}>
-      <ThemeProvider theme={theme}>
-        <GlobalStyles />
-        <Header
-          desktopNavigationItems={DefaultDesktopNavigationItems}
-          logo={{
-            url: "/",
-            svg: <SorgulatLogo />,
-          }}
+    <>
+      <Head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=0, maximum-scale=1, minimum-scale=1, user-scalable=0"
         />
-        <Component {...pageProps} />
-      </ThemeProvider>
-    </QueryClientProvider>
+        <link rel="icon" type="image/x-icon" href="/icon.png" />
+      </Head>
+      <QueryClientProvider client={queryClient}>
+        <ThemeProvider theme={theme}>
+          <GlobalStyles />
+          <Header
+            desktopNavigationItems={DefaultDesktopNavigationItems}
+            logo={{
+              url: "/",
+              svg: <SorgulatLogo />,
+            }}
+          />
+          <Component {...pageProps} />
+        </ThemeProvider>
+      </QueryClientProvider>
+    </>
   );
 }
 
