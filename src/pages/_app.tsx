@@ -20,6 +20,7 @@ body {
 
 function MyApp({ Component, pageProps }: AppProps) {
   const queryClient = new QueryClient();
+  console.log(pageProps, "pageProps geldi");
   return (
     <>
       <Head>
