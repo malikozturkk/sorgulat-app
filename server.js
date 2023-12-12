@@ -25,6 +25,5 @@ i18n
         loadPath: `${appSrc}/locales/{{lng}}/{{ns}}.json`,
         addPath: `${appSrc}/locales/{{lng}}/{{ns}}.missing.json`,
       },
-    },
-    HandleServer
+    }
   )
