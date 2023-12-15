@@ -7,6 +7,7 @@ export interface IBankCard {
     color: string;
     infos: string[];
     benefits: IBefenits[];
+    amount?: number;
 }
 
 export interface IBefenits {

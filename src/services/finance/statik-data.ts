@@ -4,10 +4,11 @@ export const bankPromotionData: IBankCard[] = [
     {
       bankName: "İş Bankası",
       description: "Emekli maaşını İş Bankası’na Taşı",
-      applicationUrl: "https://www.sorgulat.com",
+      applicationUrl: "https://www.isbank.com.tr/sgk-emeklilerine-ayricaliklar",
       imageUrl: "is-bankasi.png",
       color: "#053260",
       buttonText: "Maaşını Taşı!",
+      amount: 7.500,
       infos: [
         "Emeklilere 7.500 TL’ye varan promosyon!",
       ],
@@ -29,10 +30,11 @@ export const bankPromotionData: IBankCard[] = [
     {
       bankName: "Akbank",
       description: "Maaşını Akbank 'a Taşı!",
-      applicationUrl: "https://www.sorgulat.com",
+      applicationUrl: "https://www.akbank.com/tr-tr/hizmetler/Sayfalar/SGK-Emekli-Maas-Odemeleri.aspx",
       imageUrl: "akbank.png",
       color: "#dd0001",
       buttonText: "Maaşını Taşı!",
+      amount: 12.000,
       infos: [
         "10.000 TL Nakit Promosyon, 2.000 TL chip-para!",
         "Toplamda 12.000 TL'ye Varan Ödül!"
@@ -55,10 +57,11 @@ export const bankPromotionData: IBankCard[] = [
     {
       bankName: "ING",
       description: "Maaşını ING'ye Taşı!",
-      applicationUrl: "https://www.sorgulat.com",
+      applicationUrl: "https://www.ing.com.tr/tr/sizin-icin/odemeler/emekli-maas-odemeleri",
       imageUrl: "ing.png",
       color: "#ff6200",
       buttonText: "Maaşını Taşı!",
+      amount: 12.500,
       infos: [
         "Toplamda 12.500 TL’ye varan promosyon!"
       ],
@@ -80,10 +83,11 @@ export const bankPromotionData: IBankCard[] = [
     {
       bankName: "Garanti BBVA",
       description: "Maaşını Garanti BBVA 'ya Taşı!",
-      applicationUrl: "https://www.sorgulat.com",
+      applicationUrl: "https://www.garantibbva.com.tr/odemeler-ve-hizmetler/emekli-maas-odemeleri",
       imageUrl: "garanti.png",
       color: "#009341",
       buttonText: "Maaşını Taşı!",
+      amount: 8.500,
       infos: [
         "7.500 TL’ye varan promosyon ve 1.000 TL bonus!",
         "Maaşınızı Mobil’den taşıyın fırsatı yakalayın."
@@ -104,12 +108,117 @@ export const bankPromotionData: IBankCard[] = [
       ]
     },
     {
+      bankName: "VakıfBank",
+      description: "Maaşını VakıfBank 'a Taşı!",
+      applicationUrl: "https://www.vakifbank.com.tr/sgk-promosyon-odemeleri.aspx?pageID=2398",
+      imageUrl: "vakif-bank.png",
+      color: "#ffb300",
+      buttonText: "Maaşını Taşı!",
+      amount: 5.000,
+      infos: [
+        "Toplamda 5.000 TL’ye varan promosyon!",
+      ],
+      benefits: [
+        {
+          benefit: "EFT Havale",
+          value: "Ücretli"
+        },
+        {
+          benefit: "Tanışma Faizi",
+          value: "%41,00"
+        },
+        {
+          benefit: "Kredi Kartı",
+          value: "Var"
+        }
+      ]
+    },
+    {
+      bankName: "Fibabanka",
+      description: "Maaşını Fibabanka 'a Taşı!",
+      applicationUrl: "https://www.fibabanka.com.tr/bireysel/diger-urun-ve-hizmetlerimiz/emekli-maas-odemeleri",
+      imageUrl: "fibabank.png",
+      color: "#83bd01",
+      buttonText: "Maaşını Taşı!",
+      amount: 7.500,
+      infos: [
+        "Toplamda 7.500 TL’ye varan promosyon!",
+      ],
+      benefits: [
+        {
+          benefit: "EFT Havale",
+          value: "Ücretsiz"
+        },
+        {
+          benefit: "Tanışma Faizi",
+          value: "%45,00"
+        },
+        {
+          benefit: "Kredi Kartı",
+          value: "Var"
+        }
+      ]
+    },
+    {
+      bankName: "Halkbank",
+      description: "Maaşını Halkbank 'a Taşı!",
+      applicationUrl: "https://www.halkbank.com.tr/tr/bireysel/emekli-bankaciligi/paraf-emekli-dunyasi/yeni-emekli-maas-musterilerimize-ozel-toplam-ucbin-tl-parafpara.html",
+      imageUrl: "halkbank.png",
+      color: "#1b70b5",
+      buttonText: "Maaşını Taşı!",
+      amount: 3.000,
+      infos: [
+        "Toplamda 3.000 TL’ye varan promosyon!",
+      ],
+      benefits: [
+        {
+          benefit: "EFT Havale",
+          value: "Ücretli"
+        },
+        {
+          benefit: "Kredi Kartı",
+          value: "Aidatsız Var"
+        },
+        {
+          benefit: "Günlük Faiz",
+          value: "Var"
+        }
+      ]
+    },
+    {
+      bankName: "Albaraka Türk",
+      description: "Maaşını Albaraka Türk 'e Taşı!",
+      applicationUrl: "https://www.albaraka.com.tr/tr/kampanyalar/detay/10000-tlye-varan-emekli-promosyon-ve-odulu-albarakada",
+      imageUrl: "albaraka.png",
+      color: "#f68e1e",
+      buttonText: "Maaşını Taşı!",
+      amount: 10.000,
+      infos: [
+        "Toplamda 10.000 TL’ye varan promosyon!",
+      ],
+      benefits: [
+        {
+          benefit: "EFT Havale",
+          value: "Ücretsiz"
+        },
+        {
+          benefit: "Konut Finansmanı",
+          value: "%2,95"
+        },
+        {
+          benefit: "Kredi Kartı",
+          value: "Aidatsız Var"
+        }
+      ]
+    },
+    {
       bankName: "Denizbank",
       description: "Maaşını Denizbank'a Taşı!",
-      applicationUrl: "https://www.sorgulat.com",
+      applicationUrl: "https://www.denizbank.com/kendim-icin/emekli-bankaciligi/ayricalik/emeklilere-tl-nakit-hediye",
       imageUrl: "deniz-bank.png",
       color: "#d11241",
       buttonText: "Maaşını Taşı!",
+      amount: 5.000,
       infos: [
         "Emeklilere özel  5.000 TL’ye varan promosyon!"
       ],
@@ -131,10 +240,11 @@ export const bankPromotionData: IBankCard[] = [
     {
       bankName: "QNB Finansbank",
       description: "Emekli Maaşını QNB'ye Taşı!",
-      applicationUrl: "https://www.sorgulat.com",
+      applicationUrl: "https://www.qnbfinansbank.com/emekli-bankaciligi",
       imageUrl: "qnb.png",
       color: "#870052",
       buttonText: "Maaşını Taşı!",
+      amount: 9.200,
       infos: [
         "EYT’lilere 9.200 TL’ye varan emeklilik ödülü!"
       ],
@@ -156,10 +266,11 @@ export const bankPromotionData: IBankCard[] = [
     {
       bankName: "Yapı Kredi",
       description: "Şimdiki Emekliler Bir Başka!",
-      applicationUrl: "https://www.sorgulat.com",
+      applicationUrl: "https://www.yapikredi.com.tr/bireysel-bankacilik/odemeler-ve-hizmetler/sgk-emekli-maas-promosyonu",
       imageUrl: "yapi-kredi.png",
       color: "#004990",
       buttonText: "Maaşını Taşı!",
+      amount: 9.000,
       infos: [
         "Yapı Kredi'de Şimdiki Emekliler Bir Başka!",
         "9.000 TL'ye Varan Promosyon Yapı Kredi'de!"
@@ -180,12 +291,39 @@ export const bankPromotionData: IBankCard[] = [
       ]
     },
     {
+      bankName: "Şekerbank",
+      description: "Maaşını Şekerbank 'a Taşı!",
+      applicationUrl: "https://www.sekerbank.com.tr/bireysel/emekli-bankaciligi",
+      imageUrl: "sekerbank.png",
+      color: "#007a3d",
+      buttonText: "Maaşını Taşı!",
+      amount: 5.000,
+      infos: [
+        "Toplamda 5.000 TL’ye varan promosyon!",
+      ],
+      benefits: [
+        {
+          benefit: "EFT Havale",
+          value: "Ücretli"
+        },
+        {
+          benefit: "Tanışma Faizi",
+          value: "%27,00"
+        },
+        {
+          benefit: "Kredi Kartı",
+          value: "Aidatsız Var"
+        }
+      ]
+    },
+    {
       bankName: "Kuveyt Türk",
       description: "Maaşını Kuveyt Türk'e Taşı!",
-      applicationUrl: "https://www.sorgulat.com",
+      applicationUrl: "https://www.kuveytturk.com.tr/bireysel/odemeler-ve-hizmetler/odemeler/emekli-maas-odemeleri",
       imageUrl: "kuveyt-turk.png",
       color: "#006754",
       buttonText: "Maaşını Taşı!",
+      amount: 8.000,
       infos: [
         "Toplamda 8.000 TL’ye varan promosyon!"
       ],
@@ -205,12 +343,39 @@ export const bankPromotionData: IBankCard[] = [
       ]
     },
     {
+      bankName: "Ziraat Bankası",
+      description: "Maaşını Ziraat Bankası 'na Taşı!",
+      applicationUrl: "https://www.ziraatbank.com.tr/tr/bireysel/hizmetler/emekli-maas-odemeleri/emekli-maas-promosyon-odemesi",
+      imageUrl: "ziraat-bankasi.png",
+      color: "#e10514",
+      buttonText: "Maaşını Taşı!",
+      amount: 5.000,
+      infos: [
+        "Toplamda 5.000 TL’ye varan promosyon!",
+      ],
+      benefits: [
+        {
+          benefit: "EFT Havale",
+          value: "Ücretli"
+        },
+        {
+          benefit: "Kredi Kartı",
+          value: "Var"
+        },
+        {
+          benefit: "Günlük Faiz",
+          value: "Var"
+        }
+      ]
+    },
+    {
       bankName: "Türkiye Finans",
       description: "Maaşını Türkiye Finans'a Taşı!",
       imageUrl: "turkiye-finans.png",
-      applicationUrl: "https://www.sorgulat.com",
+      applicationUrl: "https://www.turkiyefinans.com.tr/tr-tr/kampanyalar/sayfalar/emeklilere-nakit-promosyon.aspx",
       color: "#00c4b3",
       buttonText: "Maaşını Taşı!",
+      amount: 5.000,
       infos: [
         "Toplamda 5.000 TL’ye varan promosyon!",
         "8300 Anlaşmalı ATM'den 5.000 TL'ye Kadar Para Çekme",
@@ -237,7 +402,7 @@ export const bankPromotionData: IBankCard[] = [
     {
       bankName: "Akbank",
       description: "Akbank Müşterisi Ol!",
-      applicationUrl: "https://www.sorgulat.com",
+      applicationUrl: "https://www.akbank.com/basvuru/mobileappservice/",
       imageUrl: "akbank.png",
       color: "#dd0001",
       buttonText: "Müşteri Ol!",
@@ -262,7 +427,7 @@ export const bankPromotionData: IBankCard[] = [
     {
       bankName: "QNB Finansbank",
       description: "QNB Finansbank Müşterisi Ol!",
-      applicationUrl: "https://www.sorgulat.com",
+      applicationUrl: "https://www.qnbfinansbank.com/724-bankacilik/nasil-qnbfinansbankli-olurum",
       imageUrl: "qnb.png",
       color: "#870052",
       buttonText: "Müşteri Ol!",
@@ -289,7 +454,7 @@ export const bankPromotionData: IBankCard[] = [
       bankName: "VakıfBank",
       description: "VakıfBank Müşterisi Ol!",
       imageUrl: "vakif-bank.png",
-      applicationUrl: "https://www.sorgulat.com",
+      applicationUrl: "https://www.vakifbank.com.tr/Default.aspx?pageID=3998",
       color: "#ffb300",
       buttonText: "Müşteri Ol!",
       infos: [
@@ -313,7 +478,7 @@ export const bankPromotionData: IBankCard[] = [
     {
       bankName: "Denizbank",
       description: "DenizBank Müşterisi Ol!",
-      applicationUrl: "https://www.sorgulat.com",
+      applicationUrl: "https://www.denizbank.com/denizbank-musterisi-olmak-istiyorum",
       imageUrl: "deniz-bank.png",
       color: "#d11241",
       buttonText: "Müşteri Ol!",
@@ -339,7 +504,7 @@ export const bankPromotionData: IBankCard[] = [
     {
       bankName: "Garanti BBVA",
       description: "Garanti BBVA Müşterisi Ol!",
-      applicationUrl: "https://www.sorgulat.com",
+      applicationUrl: "https://www.garantibbva.com.tr/dijital-bankacilik/musterimiz-olun",
       imageUrl: "garanti.png",
       color: "#009341",
       buttonText: "Müşteri Ol!",
@@ -365,7 +530,7 @@ export const bankPromotionData: IBankCard[] = [
     {
       bankName: "Yapı Kredi",
       description: "Yapı Kredili Ol!",
-      applicationUrl: "https://www.sorgulat.com",
+      applicationUrl: "https://www.yapikredi.com.tr/banka-hesabi-ac",
       imageUrl: "yapi-kredi.png",
       color: "#004990",
       buttonText: "Müşteri Ol!",
@@ -391,7 +556,7 @@ export const bankPromotionData: IBankCard[] = [
     {
       bankName: "Enpara",
       description: "Enparalı Ol!",
-      applicationUrl: "https://www.sorgulat.com",
+      applicationUrl: "https://www.qnbfinansbank.enpara.com/basvuru-amaciniz",
       imageUrl: "enpara.png",
       color: "#b44ea7",
       buttonText: "Müşteri Ol!",
@@ -417,7 +582,7 @@ export const bankPromotionData: IBankCard[] = [
     {
       bankName: "İş Bankası",
       description: "İşCep’ten İş Bankalı Ol!",
-      applicationUrl: "https://www.sorgulat.com",
+      applicationUrl: "https://www.isbank.com.tr/musteri-olmak-istiyorum",
       imageUrl: "is-bankasi.png",
       color: "#053260",
       buttonText: "Müşteri Ol!",
@@ -442,7 +607,7 @@ export const bankPromotionData: IBankCard[] = [
     {
       bankName: "Albaraka Türk",
       description: "Albaraka Türk Müşterisi Ol!",
-      applicationUrl: "https://www.sorgulat.com",
+      applicationUrl: "https://www.albaraka.com.tr/tr/dijital-bankacilik/nasil-albaraka-musterisi-olurum",
       imageUrl: "albaraka.png",
       color: "#f68e1e",
       buttonText: "Müşteri Ol!",
@@ -468,7 +633,7 @@ export const bankPromotionData: IBankCard[] = [
     {
       bankName: "Kuveyt Türk",
       description: "Kuveyt Türk Müşterisi Ol!",
-      applicationUrl: "https://www.sorgulat.com",
+      applicationUrl: "https://www.kuveytturk.com.tr/musteri-ol-kendin-icin",
       imageUrl: "kuveyt-turk.png",
       color: "#004638",
       buttonText: "Müşteri Ol!",
@@ -494,7 +659,7 @@ export const bankPromotionData: IBankCard[] = [
     {
       bankName: "Cepteteb",
       description: "CEPTETEB’li Ol!",
-      applicationUrl: "https://www.sorgulat.com",
+      applicationUrl: "https://www.cepteteb.com.tr/cepteteb-musteri-basvurusu",
       imageUrl: "cepteteb.png",
       color: "#16bc5d",
       buttonText: "Müşteri Ol!",
@@ -519,7 +684,7 @@ export const bankPromotionData: IBankCard[] = [
     {
       bankName: "ING",
       description: "ING'li Ol!",
-      applicationUrl: "https://www.sorgulat.com",
+      applicationUrl: "https://www.ing.com.tr/tr/ing/7-24-bankacilik/ingli-ol",
       imageUrl: "ing.png",
       color: "#ff6200",
       buttonText: "Müşteri Ol!",
@@ -544,7 +709,7 @@ export const bankPromotionData: IBankCard[] = [
     {
       bankName: "Vakıf Katılım",
       description: "Vakıf Katılım Müşterisi Ol!",
-      applicationUrl: "https://www.sorgulat.com",
+      applicationUrl: "https://www.vakifkatilim.com.tr/tr/kendim-icin/dijital-bankacilik/goruntulu-gorusmeyle-vakif-katilim-musterisi-ol",
       imageUrl: "vakif-katilim.png",
       color: "#25477B",
       buttonText: "Müşteri Ol!",
@@ -569,7 +734,7 @@ export const bankPromotionData: IBankCard[] = [
     {
       bankName: "Alternatifbank",
       description: "Alternatifbank Müşterisi Ol!",
-      applicationUrl: "https://www.sorgulat.com",
+      applicationUrl: "https://www.alternatifbank.com.tr/kampanyalar-info/goruntulu-gorusme-ile-musteri-ol",
       imageUrl: "alternatif-bank.png",
       color: "#8d003e",
       buttonText: "Müşteri Ol!",
@@ -594,7 +759,7 @@ export const bankPromotionData: IBankCard[] = [
     {
       bankName: "Anadolubank",
       description: "Anadolubank Müşterisi Ol!",
-      applicationUrl: "https://www.sorgulat.com",
+      applicationUrl: "https://www.anadolubank.com.tr/dijital/anadolubankli-ol",
       imageUrl: "anadolu-bank.png",
       color: "#008aff",
       buttonText: "Müşteri Ol!",
@@ -619,7 +784,7 @@ export const bankPromotionData: IBankCard[] = [
     {
       bankName: "Hayat Finans",
       description: "Hayat Finans Müşterisi Ol!",
-      applicationUrl: "https://www.sorgulat.com",
+      applicationUrl: "https://www.hayatfinans.com.tr/hayatli-ol",
       imageUrl: "hayat-finans.png",
       color: "#01a05f",
       buttonText: "Müşteri Ol!",
@@ -645,7 +810,7 @@ export const bankPromotionData: IBankCard[] = [
       bankName: "Türkiye Finans",
       description: "Türkiye Finans Müşterisi Ol!",
       imageUrl: "turkiye-finans.png",
-      applicationUrl: "https://www.sorgulat.com",
+      applicationUrl: "https://www.turkiyefinans.com.tr/tr-tr/dijital-bankacilik/sayfalar/musteri-ol.aspx",
       color: "#00c4b3",
       buttonText: "Müşteri Ol!",
       infos: [
@@ -670,7 +835,7 @@ export const bankPromotionData: IBankCard[] = [
       bankName: "Fibabanka",
       description: "Fibabanka Müşterisi Ol!",
       imageUrl: "fibabank.png",
-      applicationUrl: "https://www.sorgulat.com",
+      applicationUrl: "https://www.fibabanka.com/musteri-olmak-istiyorum",
       color: "#83bd01",
       buttonText: "Müşteri Ol!",
       infos: [
@@ -695,7 +860,7 @@ export const bankPromotionData: IBankCard[] = [
       bankName: "HSBC",
       description: "HSBC Müşterisi Ol!",
       imageUrl: "hsbc.png",
-      applicationUrl: "https://www.sorgulat.com",
+      applicationUrl: "https://www.hsbc.com.tr/hsbc/hsbcli-olun",
       color: "#db0011",
       buttonText: "Müşteri Ol!",
       infos: [
@@ -720,7 +885,7 @@ export const bankPromotionData: IBankCard[] = [
       bankName: "Odeabank",
       description: "Odeabank Müşterisi Ol!",
       imageUrl: "odeabank.png",
-      applicationUrl: "https://www.sorgulat.com",
+      applicationUrl: "https://www.odeabank.com.tr/bireysel/goruntulu-gorusme-ile-hesap-acma",
       color: "#2d353c",
       buttonText: "Müşteri Ol!",
       infos: [
@@ -745,7 +910,7 @@ export const bankPromotionData: IBankCard[] = [
       bankName: "Şekerbank",
       description: "Şekerbank Müşterisi Ol!",
       imageUrl: "sekerbank.png",
-      applicationUrl: "https://www.sorgulat.com",
+      applicationUrl: "https://www.sekerbank.com.tr/dijital-bankacilik/musterimiz-olun",
       color: "#007a3d",
       buttonText: "Müşteri Ol!",
       infos: [
@@ -770,7 +935,7 @@ export const bankPromotionData: IBankCard[] = [
       bankName: "N Kolay",
       description: "N Kolay Müşterisi Ol!",
       imageUrl: "nkolay.png",
-      applicationUrl: "https://www.sorgulat.com",
+      applicationUrl: "https://www.nkolay.com/musteri-ol",
       color: "#0075eb",
       buttonText: "Müşteri Ol!",
       infos: [
@@ -796,7 +961,7 @@ export const bankPromotionData: IBankCard[] = [
       bankName: "ON",
       description: "ON Müşterisi Ol!",
       imageUrl: "on.png",
-      applicationUrl: "https://www.sorgulat.com",
+      applicationUrl: "https://on.com.tr/subeye-gitmeden-hesap-acma",
       color: "lime",
       buttonText: "Müşteri Ol!",
       infos: [
@@ -821,7 +986,7 @@ export const bankPromotionData: IBankCard[] = [
       bankName: "Ziraat Bankası",
       description: "Ziraat Bankası Müşterisi Ol!",
       imageUrl: "ziraat-bankasi.png",
-      applicationUrl: "https://www.sorgulat.com",
+      applicationUrl: "https://www.ziraatbank.com.tr/tr/bankamiz/basin-odasi/ziraatten-yenilikler/ziraat-li-olmak-istiyorum",
       color: "#e10514",
       buttonText: "Müşteri Ol!",
       infos: [
@@ -846,7 +1011,7 @@ export const bankPromotionData: IBankCard[] = [
       bankName: "Halkbank",
       description: "Halkbank Müşterisi Ol!",
       imageUrl: "halkbank.png",
-      applicationUrl: "https://www.sorgulat.com",
+      applicationUrl: "https://www.halkbank.com.tr/tr/dijital-bankacilik/mobil-bankacilik/musteri-olmak-istiyorum.html",
       color: "#1b70b5",
       buttonText: "Müşteri Ol!",
       infos: [
