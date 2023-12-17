@@ -18,9 +18,6 @@ const eytBankCard = async () => {
 };
 
 const RetirementBanking = () => {
-  const { t } = useTranslation("common");
-  const router = useRouter();
-  const isMobile = useIsMobile();
   const { data, isLoading } = useQuery("BankCard", eytBankCard);
   const [sortedData, setSortedData] = React.useState(null);
   React.useEffect(() => {
@@ -77,6 +74,10 @@ const RetirementBanking = () => {
           ]}
         />
       </S.Container>
+      <p style={{ margin: 0 }}>
+        "Emekli Bankacılığı" araması için {sortedData && sortedData.length}{" "}
+        sonuç listeleniyor
+      </p>
       <BankCard data={sortedData ? sortedData : data} isLoading={isLoading} />
     </Container>
   );
