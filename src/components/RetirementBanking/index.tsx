@@ -27,66 +27,58 @@ const RetirementBanking = () => {
     setSortedData(data);
   }, [data]);
   return (
-    <>
-      {!isMobile && <MarketIndices />}
-      <Container>
-        {isMobile && <MarketIndices />}
-        <S.Container>
-          <S.Info>
-            <BreadCrumb
-              data={[
-                {
-                  href: "/",
-                  text: "Anasayfa",
-                },
-                {
-                  text: "Emekli Bankacılığı",
-                },
-              ]}
-            />
-            <S.Title>
-              Bankaların Emeklilik Promosyon ve Avantajlarını Karşılaştır
-            </S.Title>
-            <S.Description>
-              Bankaların Emekli Bankacılığı ürünlerine Sorgulat ile ulaşın,
-              karşılaştırın ve en avantajlısına hemen başvurun!
-            </S.Description>
-          </S.Info>
-          <Sorted
-            defaultValue="Önerilen Sıralama"
-            data={sortedData}
-            setSortedData={setSortedData}
-            lists={[
+    <Container>
+      <S.Container>
+        <S.Info>
+          <BreadCrumb
+            data={[
               {
-                name: "Önerilen Sıralama",
-                key: "recommended",
+                href: "/",
+                text: "Anasayfa",
               },
               {
-                name: "En Düşük Promosyon",
-                key: "lowest",
-              },
-              {
-                name: "En Yüksek Promosyon",
-                key: "highest",
-              },
-              {
-                name: "Banka İsmine Göre (A-Z)",
-                key: "bankNameAsc",
-              },
-              {
-                name: "Banka İsmine Göre (Z-A)",
-                key: "bankNameDesc",
+                text: "Emekli Bankacılığı",
               },
             ]}
           />
-        </S.Container>
-        <BankCard data={sortedData ? sortedData : data} isLoading={isLoading} />
-        <div>
-          {t("homepage.title")}
-          <div>Retirement Banking {router.locale}</div>
-        </div>
-      </Container>
-    </>
+          <S.Title>
+            Bankaların Emeklilik Promosyon ve Avantajlarını Karşılaştır
+          </S.Title>
+          <S.Description>
+            Bankaların Emekli Bankacılığı ürünlerine Sorgulat ile ulaşın,
+            karşılaştırın ve en avantajlısına hemen başvurun!
+          </S.Description>
+        </S.Info>
+        <Sorted
+          defaultValue="Önerilen Sıralama"
+          data={sortedData}
+          setSortedData={setSortedData}
+          lists={[
+            {
+              name: "Önerilen Sıralama",
+              key: "recommended",
+            },
+            {
+              name: "En Düşük Promosyon",
+              key: "lowest",
+            },
+            {
+              name: "En Yüksek Promosyon",
+              key: "highest",
+            },
+            {
+              name: "Banka İsmine Göre (A-Z)",
+              key: "bankNameAsc",
+            },
+            {
+              name: "Banka İsmine Göre (Z-A)",
+              key: "bankNameDesc",
+            },
+          ]}
+        />
+      </S.Container>
+      <BankCard data={sortedData ? sortedData : data} isLoading={isLoading} />
+    </Container>
   );
 };
 
