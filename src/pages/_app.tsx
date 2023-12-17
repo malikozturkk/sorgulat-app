@@ -16,6 +16,15 @@ body {
     font-family: "Open Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     margin: 0;
 }
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #363940;
+}
 `;
 
 function MyApp({ Component, pageProps }: AppProps) {

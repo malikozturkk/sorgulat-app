@@ -7,7 +7,6 @@ export const HeaderMain = styled.header`
     box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.08);
     padding: 0 16px;
     height: 80px;
-    margin-bottom: 20px;
 `
 
 export const Main = styled.div`

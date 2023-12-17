@@ -3,7 +3,7 @@ import { IHeader } from "./Header.types";
 import * as S from "./Header.styled";
 import Link from "next/link";
 import Image from "next/image";
-import ArrowDown from "../../Icons/svg/arrow-down.svg";
+import ArrowDown from "../../Icons/svg/arrow-right.svg";
 import ArrowRight from "../../Icons/svg/arrowRight.svg";
 
 const Header: React.FC<IHeader> = (props) => {
