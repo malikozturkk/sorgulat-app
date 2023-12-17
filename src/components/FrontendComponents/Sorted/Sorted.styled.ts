@@ -33,7 +33,7 @@ export const SortedLists = styled.ul`
   border: 1px solid #646ECB;
   border-radius: 0 0 8px 8px;
   border-top: none;
-  z-index: 100;
+  z-index: 9;
   box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.08);
   width: 100%;
   box-sizing: border-box;

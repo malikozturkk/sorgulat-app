@@ -48,7 +48,7 @@ const RetirementBanking = () => {
               Bankaların Emeklilik Promosyon ve Avantajlarını Karşılaştır
             </S.Title>
             <S.Description>
-              Bankaların Emekli Bankacılığı ürünlerine HangiKredi ile ulaşın,
+              Bankaların Emekli Bankacılığı ürünlerine Sorgulat ile ulaşın,
               karşılaştırın ve en avantajlısına hemen başvurun!
             </S.Description>
           </S.Info>

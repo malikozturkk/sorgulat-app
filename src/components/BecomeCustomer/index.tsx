@@ -34,12 +34,10 @@ const BecomeCustomer = () => {
               },
             ]}
           />
-          <S.Title>
-            Bankaların Emeklilik Promosyon ve Avantajlarını Karşılaştır
-          </S.Title>
+          <S.Title>Şubeye Gitmeden Banka Hesabı Açın!</S.Title>
           <S.Description>
-            Bankaların Emekli Bankacılığı ürünlerine HangiKredi ile ulaşın,
-            karşılaştırın ve en avantajlısına hemen başvurun!
+            Sorgulat ile şubeye gitmeden bankaları karşılaştır ve seçtiğin
+            bankanın hemen müşterisi ol!
           </S.Description>
         </S.Info>
         <Sorted
