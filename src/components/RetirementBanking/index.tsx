@@ -75,8 +75,8 @@ const RetirementBanking = () => {
         />
       </S.Container>
       <p style={{ margin: 0 }}>
-        "Emekli Bankacılığı" araması için {sortedData && sortedData.length}{" "}
-        sonuç listeleniyor
+        {'"'}Emekli Bankacılığı{'"'} araması için{" "}
+        <b>{sortedData && sortedData.length}</b> sonuç listeleniyor
       </p>
       <BankCard data={sortedData ? sortedData : data} isLoading={isLoading} />
     </Container>

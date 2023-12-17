@@ -61,8 +61,8 @@ const BecomeCustomer = () => {
         />
       </S.Container>
       <p style={{ margin: 0 }}>
-        "Bankaların Müşterisi Ol" araması için {sortedData && sortedData.length}{" "}
-        sonuç listeleniyor
+        {'"'}Bankaların Müşterisi Ol{'"'} araması için{" "}
+        <b>{sortedData && sortedData.length}</b> sonuç listeleniyor
       </p>
       <BankCard data={sortedData ? sortedData : data} isLoading={isLoading} />
     </Container>
