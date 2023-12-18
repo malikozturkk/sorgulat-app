@@ -39,6 +39,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <link rel="icon" type="image/x-icon" href="/icon.png" />
         <link rel="apple-touch-icon" href="/icon.png" />
+        <link rel="shortcut icon" href="/icon.png" type="image/x-icon" />
       </Head>
       <QueryClientProvider client={queryClient}>
         <ThemeProvider theme={theme}>
