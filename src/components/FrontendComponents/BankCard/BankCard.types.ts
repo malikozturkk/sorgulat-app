@@ -2,6 +2,7 @@ export interface IBankCard {
     bankName: string;
     description: string
     buttonText: string;
+    priority?: number;
     applicationUrl: string;
     imageUrl: string;
     color: string;

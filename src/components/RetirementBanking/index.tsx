@@ -1,8 +1,5 @@
 import React from "react";
-import { useTranslation } from "next-i18next";
-import { useRouter } from "next/router";
 import * as S from "./RetirementBanking.styled";
-import MarketIndices from "components/FrontendComponents/MarketIndices";
 import BankCard from "components/FrontendComponents/BankCard";
 import Container from "components/DesignSystem/Container";
 import { useIsMobile } from "hooks/useIsMobile";
@@ -20,6 +17,7 @@ const eytBankCard = async () => {
 const RetirementBanking = () => {
   const { data, isLoading } = useQuery("BankCard", eytBankCard);
   const [sortedData, setSortedData] = React.useState(null);
+  const IsMobile = useIsMobile();
   React.useEffect(() => {
     setSortedData(data);
   }, [data]);
@@ -48,6 +46,7 @@ const RetirementBanking = () => {
         </S.Info>
         <Sorted
           defaultValue="Önerilen Sıralama"
+          defaultKey="recommended"
           data={sortedData}
           setSortedData={setSortedData}
           lists={[
@@ -74,7 +73,7 @@ const RetirementBanking = () => {
           ]}
         />
       </S.Container>
-      <p style={{ margin: 0 }}>
+      <p style={{ margin: !IsMobile && 0 }}>
         {'"'}Emekli Bankacılığı{'"'} araması için{" "}
         <b>{sortedData && sortedData.length}</b> sonuç listeleniyor
       </p>

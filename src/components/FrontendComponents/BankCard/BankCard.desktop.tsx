@@ -5,6 +5,7 @@ import * as S from "./BankCard.styled";
 import Megaphone from "../../Icons/svg/megaphone.svg";
 import Camera from "../../Icons/svg/camera.svg";
 import ArrowRight from "../../Icons/svg/arrowRight.svg";
+import QRCode from "react-qr-code";
 
 const BankCardDesktop = (props) => {
   const { item, index } = props;
@@ -56,14 +57,10 @@ const BankCardDesktop = (props) => {
             </div>
             <span>QR Okut, Fırsatı Yakala!</span>
           </S.CameraMain>
-          <Image
-            alt="İş Bankası"
-            loading="lazy"
-            width="80"
-            height="80"
-            decoding="async"
-            data-nimg="1"
-            src="https://cdn.hangikredi.com/images/retirementbanking/d8099bef-155d-4c92-b849-399f721ae883.svg"
+          <QRCode
+            size={80}
+            value={item.applicationUrl}
+            viewBox={`0 0 256 256`}
           />
         </S.QrMain>
         <S.DetailMain>

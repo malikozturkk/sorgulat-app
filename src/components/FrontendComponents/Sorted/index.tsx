@@ -2,12 +2,14 @@ import * as React from "react";
 import * as S from "./Sorted.styled";
 import * as T from "./Sorted.types";
 import ArrowRight from "../../Icons/svg/arrow-right.svg";
+import SkeletonLoader from "../MarketIndices/SkeletonLoader";
 
 const Sorted: React.FC<T.SortedProps> = (props) => {
   const [open, setOpen] = React.useState(false);
   const [hover, setHover] = React.useState(false);
   const ref: React.RefObject<HTMLDivElement> | any = React.useRef();
-  const { defaultValue, lists, data, setSortedData } = props;
+  const { defaultValue, defaultKey, lists, data, setSortedData, isLoading } =
+    props;
   const [selected, setSelected] = React.useState(defaultValue);
 
   React.useEffect(() => {
@@ -36,16 +38,18 @@ const Sorted: React.FC<T.SortedProps> = (props) => {
       } else if (key === "bankNameDesc") {
         return b.bankName.localeCompare(a.bankName);
       } else if (key === "recommended") {
-        return 0;
+        return b.priority - a.priority;
       }
     };
 
     const sorted = [...data].sort(compareFunction);
     setSortedData(sorted);
-    setOpen(!open);
+    setOpen(false);
   };
 
-  return (
+  return isLoading ? (
+    <SkeletonLoader repeat={1} width="210px" height="45px" />
+  ) : (
     <S.Main>
       <S.SortedMain
         onClick={() => setOpen(!open)}

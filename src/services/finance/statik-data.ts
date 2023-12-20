@@ -8,6 +8,7 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "is-bankasi.png",
       color: "#053260",
       buttonText: "Maaşını Taşı!",
+      priority: 100,
       amount: 7.500,
       infos: [
         "Emeklilere 7.500 TL’ye varan promosyon!",
@@ -34,6 +35,7 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "akbank.png",
       color: "#dd0001",
       buttonText: "Maaşını Taşı!",
+      priority: 99,
       amount: 12.000,
       infos: [
         "10.000 TL Nakit Promosyon, 2.000 TL chip-para!",
@@ -61,6 +63,7 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "ing.png",
       color: "#ff6200",
       buttonText: "Maaşını Taşı!",
+      priority: 98,
       amount: 12.500,
       infos: [
         "Toplamda 12.500 TL’ye varan promosyon!"
@@ -87,6 +90,7 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "garanti.png",
       color: "#009341",
       buttonText: "Maaşını Taşı!",
+      priority: 97,
       amount: 8.500,
       infos: [
         "7.500 TL’ye varan promosyon ve 1.000 TL bonus!",
@@ -114,6 +118,7 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "vakif-bank.png",
       color: "#ffb300",
       buttonText: "Maaşını Taşı!",
+      priority: 96,
       amount: 5.000,
       infos: [
         "Toplamda 5.000 TL’ye varan promosyon!",
@@ -140,6 +145,7 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "fibabank.png",
       color: "#83bd01",
       buttonText: "Maaşını Taşı!",
+      priority: 95,
       amount: 7.500,
       infos: [
         "Toplamda 7.500 TL’ye varan promosyon!",
@@ -166,6 +172,7 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "halkbank.png",
       color: "#1b70b5",
       buttonText: "Maaşını Taşı!",
+      priority: 94,
       amount: 3.000,
       infos: [
         "Toplamda 3.000 TL’ye varan promosyon!",
@@ -192,6 +199,7 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "albaraka.png",
       color: "#f68e1e",
       buttonText: "Maaşını Taşı!",
+      priority: 93,
       amount: 10.000,
       infos: [
         "Toplamda 10.000 TL’ye varan promosyon!",
@@ -218,6 +226,7 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "deniz-bank.png",
       color: "#d11241",
       buttonText: "Maaşını Taşı!",
+      priority: 92,
       amount: 5.000,
       infos: [
         "Emeklilere özel  5.000 TL’ye varan promosyon!"
@@ -244,6 +253,7 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "qnb.png",
       color: "#870052",
       buttonText: "Maaşını Taşı!",
+      priority: 91,
       amount: 9.200,
       infos: [
         "EYT’lilere 9.200 TL’ye varan emeklilik ödülü!"
@@ -270,6 +280,7 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "yapi-kredi.png",
       color: "#004990",
       buttonText: "Maaşını Taşı!",
+      priority: 90,
       amount: 9.000,
       infos: [
         "Yapı Kredi'de Şimdiki Emekliler Bir Başka!",
@@ -297,6 +308,7 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "sekerbank.png",
       color: "#007a3d",
       buttonText: "Maaşını Taşı!",
+      priority: 89,
       amount: 5.000,
       infos: [
         "Toplamda 5.000 TL’ye varan promosyon!",
@@ -323,6 +335,7 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "kuveyt-turk.png",
       color: "#006754",
       buttonText: "Maaşını Taşı!",
+      priority: 88,
       amount: 8.000,
       infos: [
         "Toplamda 8.000 TL’ye varan promosyon!"
@@ -349,6 +362,7 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "ziraat-bankasi.png",
       color: "#e10514",
       buttonText: "Maaşını Taşı!",
+      priority: 87,
       amount: 5.000,
       infos: [
         "Toplamda 5.000 TL’ye varan promosyon!",
@@ -375,6 +389,7 @@ export const bankPromotionData: IBankCard[] = [
       applicationUrl: "https://www.turkiyefinans.com.tr/tr-tr/kampanyalar/sayfalar/emeklilere-nakit-promosyon.aspx",
       color: "#00c4b3",
       buttonText: "Maaşını Taşı!",
+      priority: 86,
       amount: 5.000,
       infos: [
         "Toplamda 5.000 TL’ye varan promosyon!",
@@ -406,6 +421,7 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "akbank.png",
       color: "#dd0001",
       buttonText: "Müşteri Ol!",
+      priority: 100,
       infos: [
         "%0 faizli 20.000 TL'ye Varan Taksitli Avans!",
       ],
@@ -431,6 +447,7 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "qnb.png",
       color: "#870052",
       buttonText: "Müşteri Ol!",
+      priority: 99,
       infos: [
         "%0 faiz ile 10.000 TL'ye Varan Kredi Fırsatı!",
         "%0 faiz ile 10.000 TL'ye Varan Nakit Avans!"
@@ -457,6 +474,7 @@ export const bankPromotionData: IBankCard[] = [
       applicationUrl: "https://www.vakifbank.com.tr/Default.aspx?pageID=3998",
       color: "#ffb300",
       buttonText: "Müşteri Ol!",
+      priority: 98,
       infos: [
         "İlk defa ARI Hesabı açtıranlara %41,00 Tanışma faizi fırsatı VakıfBank’ta."
       ],
@@ -482,6 +500,7 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "deniz-bank.png",
       color: "#d11241",
       buttonText: "Müşteri Ol!",
+      priority: 97,
       infos: [
         "%0,99 Faiz ile 10.000 TL'ye Varan Kredi!",
         "%0 Faiz ile 10.000 TL'ye Varan Nakit Avans!"
@@ -508,6 +527,7 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "garanti.png",
       color: "#009341",
       buttonText: "Müşteri Ol!",
+      priority: 96,
       infos: [
         "15.000 TL Faizsiz Taksitli Nakit Avans!",
         "10.000 TL'ye Varan Faizsiz Kredi!"
@@ -534,6 +554,7 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "yapi-kredi.png",
       color: "#004990",
       buttonText: "Müşteri Ol!",
+      priority: 95,
       infos: [
         "%0 Faizli 20.000 TL’ye Varan Nakit Avans!",
         "Yapı Kredi Mobil’den Chippin’e de Üye Ol!"
@@ -560,6 +581,7 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "enpara.png",
       color: "#b44ea7",
       buttonText: "Müşteri Ol!",
+      priority: 94,
       infos: [
         "Masrafsız Bankacılık için Enparalı Olun!",
         "%0 Faiz ile 10.000 TL'ye Varan Kredi!"
@@ -586,6 +608,7 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "is-bankasi.png",
       color: "#053260",
       buttonText: "Müşteri Ol!",
+      priority: 93,
       infos: [
         "%0 Faizli 20.000 TL Taksitli Nakit Avans!",
       ],
@@ -611,6 +634,7 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "albaraka.png",
       color: "#f68e1e",
       buttonText: "Müşteri Ol!",
+      priority: 92,
       infos: [
         "%35’e Varan Kâr Oranlı TL Katılma Hesapları!",
         "Vade Farksız 15.000 TL Finansman!",
@@ -637,6 +661,7 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "kuveyt-turk.png",
       color: "#004638",
       buttonText: "Müşteri Ol!",
+      priority: 91,
       infos: [
         "Vade Farksız 10.000 TL İhtiyaç Finansmanı",
         "Mobilden Kuveyt Türklü Olanlara 1000 TL Hediye"
@@ -663,6 +688,7 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "cepteteb.png",
       color: "#16bc5d",
       buttonText: "Müşteri Ol!",
+      priority: 90,
       infos: [
         "%40 Hoş Geldin Faizi İle Rahat Rahat Biriktir!",
       ],
@@ -688,6 +714,7 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "ing.png",
       color: "#ff6200",
       buttonText: "Müşteri Ol!",
+      priority: 89,
       infos: [
         "%0,99 Yansıyan Faizle 20.000 TL’ye Kadar Kredi"
       ],
@@ -713,6 +740,7 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "vakif-katilim.png",
       color: "#25477B",
       buttonText: "Müşteri Ol!",
+      priority: 88,
       infos: [
         "Şubeye Gitmeden Vakıf Katılım Müşterisi Olun!"
       ],
@@ -738,6 +766,7 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "alternatif-bank.png",
       color: "#8d003e",
       buttonText: "Müşteri Ol!",
+      priority: 87,
       infos: [
         "Sen de VOV'lu Ol, Kazan Bol Bol!"
       ],
@@ -763,6 +792,7 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "anadolu-bank.png",
       color: "#008aff",
       buttonText: "Müşteri Ol!",
+      priority: 86,
       infos: [
         "Renkli Hesap ile Her Gün Kazanın!"
       ],
@@ -788,6 +818,7 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "hayat-finans.png",
       color: "#01a05f",
       buttonText: "Müşteri Ol!",
+      priority: 85,
       infos: [
         "Yıllık Brüt Kar Payı Oranı %42,45!"
       ],
@@ -813,6 +844,7 @@ export const bankPromotionData: IBankCard[] = [
       applicationUrl: "https://www.turkiyefinans.com.tr/tr-tr/dijital-bankacilik/sayfalar/musteri-ol.aspx",
       color: "#00c4b3",
       buttonText: "Müşteri Ol!",
+      priority: 84,
       infos: [
         "Şubeye Gitmeden Vakıf Katılım Müşterisi Olun!",
       ],
@@ -838,6 +870,7 @@ export const bankPromotionData: IBankCard[] = [
       applicationUrl: "https://www.fibabanka.com/musteri-olmak-istiyorum",
       color: "#83bd01",
       buttonText: "Müşteri Ol!",
+      priority: 83,
       infos: [
         "Görüntülü Bankacılık İle Yeni Üye Olanlara %45 Kiraz Hesap Faizi!",
       ],
@@ -863,6 +896,7 @@ export const bankPromotionData: IBankCard[] = [
       applicationUrl: "https://www.hsbc.com.tr/hsbc/hsbcli-olun",
       color: "#db0011",
       buttonText: "Müşteri Ol!",
+      priority: 82,
       infos: [
         "%28 Hoş Geldin Faizi İle Rahat Rahat Biriktir!",
       ],
@@ -888,6 +922,7 @@ export const bankPromotionData: IBankCard[] = [
       applicationUrl: "https://www.odeabank.com.tr/bireysel/goruntulu-gorusme-ile-hesap-acma",
       color: "#2d353c",
       buttonText: "Müşteri Ol!",
+      priority: 81,
       infos: [
         "Dijital kanallardan yeni müşteri olanlar ek +%3 faiz oranından yararlanıyor!"
       ],
@@ -913,6 +948,7 @@ export const bankPromotionData: IBankCard[] = [
       applicationUrl: "https://www.sekerbank.com.tr/dijital-bankacilik/musterimiz-olun",
       color: "#007a3d",
       buttonText: "Müşteri Ol!",
+      priority: 80,
       infos: [
         "%27 Hoş Geldin Faizi İle Rahat Rahat Biriktir!"
       ],
@@ -938,6 +974,7 @@ export const bankPromotionData: IBankCard[] = [
       applicationUrl: "https://www.nkolay.com/musteri-ol",
       color: "#0075eb",
       buttonText: "Müşteri Ol!",
+      priority: 79,
       infos: [
         "%0 faiz ile 10.000 TL Nakit Avans!",
         "Türkiyedeki tüm ATM'lerden ücretsiz para çekme ve yatırma!",
@@ -964,6 +1001,7 @@ export const bankPromotionData: IBankCard[] = [
       applicationUrl: "https://on.com.tr/subeye-gitmeden-hesap-acma",
       color: "lime",
       buttonText: "Müşteri Ol!",
+      priority: 78,
       infos: [
         "%0,99'dan başlayan ihtiyaç kredisi faizi!"
       ],
@@ -989,6 +1027,7 @@ export const bankPromotionData: IBankCard[] = [
       applicationUrl: "https://www.ziraatbank.com.tr/tr/bankamiz/basin-odasi/ziraatten-yenilikler/ziraat-li-olmak-istiyorum",
       color: "#e10514",
       buttonText: "Müşteri Ol!",
+      priority: 77,
       infos: [
         "%33 Hoş Geldin Faizi İle Rahat Rahat Biriktir!"
       ],
@@ -1014,6 +1053,7 @@ export const bankPromotionData: IBankCard[] = [
       applicationUrl: "https://www.halkbank.com.tr/tr/dijital-bankacilik/mobil-bankacilik/musteri-olmak-istiyorum.html",
       color: "#1b70b5",
       buttonText: "Müşteri Ol!",
+      priority: 76,
       infos: [
         "%28 Hoş Geldin Faizi İle Rahat Rahat Biriktir!"
       ],

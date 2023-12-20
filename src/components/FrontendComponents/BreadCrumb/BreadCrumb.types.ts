@@ -1,6 +1,7 @@
 
 export interface BreadCrumbProps {
     data: BreadCrumbDataProps[];
+    isLoading?: boolean;
 }
 
 export interface BreadCrumbDataProps {

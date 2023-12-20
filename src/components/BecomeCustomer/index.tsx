@@ -7,6 +7,8 @@ import BankCard from "components/FrontendComponents/BankCard";
 import Container from "components/DesignSystem/Container";
 import Sorted from "components/FrontendComponents/Sorted";
 import BreadCrumb from "components/FrontendComponents/BreadCrumb";
+import { useIsMobile } from "hooks/useIsMobile";
+import SkeletonLoader from "components/FrontendComponents/MarketIndices/SkeletonLoader";
 
 const eytBankCard = async () => {
   const response = await API.get<IBankCard[]>("/api/v1/become-customer");
@@ -16,6 +18,7 @@ const eytBankCard = async () => {
 const BecomeCustomer = () => {
   const { data, isLoading } = useQuery("BankCard", eytBankCard);
   const [sortedData, setSortedData] = React.useState(null);
+  const IsMobile = useIsMobile();
   React.useEffect(() => {
     setSortedData(data);
   }, [data]);
@@ -24,6 +27,7 @@ const BecomeCustomer = () => {
       <S.Container>
         <S.Info>
           <BreadCrumb
+            isLoading={isLoading}
             data={[
               {
                 href: "/",
@@ -34,16 +38,26 @@ const BecomeCustomer = () => {
               },
             ]}
           />
-          <S.Title>Şubeye Gitmeden Banka Hesabı Açın!</S.Title>
-          <S.Description>
-            Sorgulat ile şubeye gitmeden bankaları karşılaştır ve seçtiğin
-            bankanın hemen müşterisi ol!
-          </S.Description>
+          {isLoading ? (
+            <SkeletonLoader repeat={1} width="560px" height="28px" />
+          ) : (
+            <S.Title>Şubeye Gitmeden Banka Hesabı Açın!</S.Title>
+          )}
+          {isLoading ? (
+            <SkeletonLoader repeat={1} width="560px" height="48px" />
+          ) : (
+            <S.Description>
+              Sorgulat ile şubeye gitmeden bankaları karşılaştır ve seçtiğin
+              bankanın hemen müşterisi ol!
+            </S.Description>
+          )}
         </S.Info>
         <Sorted
           defaultValue="Önerilen Sıralama"
+          defaultKey="recommended"
           data={sortedData}
           setSortedData={setSortedData}
+          isLoading={isLoading}
           lists={[
             {
               name: "Önerilen Sıralama",
@@ -60,7 +74,7 @@ const BecomeCustomer = () => {
           ]}
         />
       </S.Container>
-      <p style={{ margin: 0 }}>
+      <p style={{ margin: !IsMobile && 0 }}>
         {'"'}Bankaların Müşterisi Ol{'"'} araması için{" "}
         <b>{sortedData && sortedData.length}</b> sonuç listeleniyor
       </p>
