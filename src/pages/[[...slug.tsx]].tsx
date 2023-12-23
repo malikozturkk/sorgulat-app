@@ -8,6 +8,7 @@ import { default as nextI18nextConfig } from "../../next-i18next.config";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { withTheme } from "styled-components";
 import { useRouter } from "next/router";
+import { PAGE_TO_METHODS } from "../utils/pages";
 
 const { publicRuntimeConfig } = getConfig();
 const processEnv = publicRuntimeConfig?.processEnv || {};
@@ -55,6 +56,19 @@ export const getServerSideProps: GetServerSideProps = async ({
     };
   }
 
+  // @ts-ignore
+  const toMatch: any = match($PagePath, {
+    decode: decodeURIComponent,
+  });
+
+  let $params = await toMatch($finalURL)?.params;
+
+  // @ts-ignore
+  const pageData = PAGE_TO_METHODS(locale)[$PagePath]
+    ? // @ts-ignore
+      await PAGE_TO_METHODS(locale)[$PagePath]($params)
+    : null;
+
   return {
     props: {
       ...(await serverSideTranslations(
@@ -66,6 +80,7 @@ export const getServerSideProps: GetServerSideProps = async ({
       locale: locale,
       cookies: req.headers["cookie"] || req.cookies || req.headers["x-cookie"],
       resolvedUrl,
+      pageData: pageData || null,
     },
   };
 };

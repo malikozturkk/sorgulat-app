@@ -30,6 +30,7 @@ a {
 function MyApp({ Component, pageProps }: AppProps) {
   const queryClient = new QueryClient();
   console.log(pageProps, "pageProps geldi");
+  const metaText = pageProps?.pageData?.props?.data || "";
   return (
     <>
       <Head>
@@ -40,12 +41,18 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link rel="icon" type="image/x-icon" href="/icon.png" />
         <link rel="apple-touch-icon" href="/icon.png" />
         <link rel="shortcut icon" href="/icon.png" type="image/x-icon" />
-        <title>
-          SORGULAT: En Avantajlı Teklifi Karşılaştır Sorgulat Enuygununu Bul
-        </title>
-        <meta property="og:title" content="sorgulat og title" />
-        <meta name="description" content="sorgulat description" />
-        <meta property="og:description" content="sorgulat og description" />
+        <title>{metaText.title}</title>
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={metaText.title} />
+        <meta property="og:site_name" content="Sorgulat.com" />
+        <meta property="og:url" content={metaText.creator} />
+        <meta property="og:image" content="/logo.png" />
+        <meta property="og:locale" content="tr" />
+        <meta name="description" content={metaText.description} />
+        <meta name="application-name" content={metaText.applicationName} />
+        <meta name="creator" content={metaText.creator} />
+        <meta name="publisher" content={metaText.publisher} />
+        <meta name="category" content={metaText.category} />
       </Head>
       <QueryClientProvider client={queryClient}>
         <ThemeProvider theme={theme}>
