@@ -46,7 +46,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta property="og:title" content={metaText.title} />
         <meta property="og:site_name" content="Sorgulat.com" />
         <meta property="og:url" content={metaText.creator} />
-        <meta property="og:image" content="/logo.png" />
+        <meta property="og:image" content="sorgulat.com/logo.png" />
         <meta property="og:locale" content="tr" />
         <meta name="description" content={metaText.description} />
         <meta name="application-name" content={metaText.applicationName} />
