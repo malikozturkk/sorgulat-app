@@ -70,12 +70,13 @@ export const MobileHeaderNavItem = styled.li<{ active: boolean }>`
     `}
 `
 
-export const HeaderNavItem = styled.div`
+export const HeaderNavItem = styled.div<{ open: boolean }>`
     padding: 28px 12px;
     display: flex;
     gap: 6px;
     align-items: center;
     cursor: pointer;
+    position: ${(props) => !props?.open && 'relative'};
 `
 
 export const SubMenuContainer = styled.div`
@@ -89,6 +90,23 @@ export const SubMenuContainer = styled.div`
     left: 0;
     top: 80px;
     z-index: 10;
+`
+
+export const BadgeMain = styled.div`
+    position: absolute;
+    padding: 4px 6px;
+    border-radius: 100px;
+    background-color: #646ECB;
+    top: 12px;
+    right: -15px;
+    z-index: 10;
+`
+
+export const Badge = styled.div`
+    color: rgb(255, 255, 255);
+    font-size: 11px;
+    font-weight: 600;
+    line-height: normal;
 `
 
 export const HeaderNavSubMenu = styled.ul`

@@ -5,7 +5,6 @@ export interface IHeader {
     logo?: ILogoProps;
     position?: 'flex-start' | 'flex-end';
     desktopNavigationItems?: IHeaderItemProps;
-    mobileNavigationItems?: IHeaderItemProps;
     membership?: boolean;
 }
 

@@ -10,7 +10,6 @@ export const DefaultDesktopNavigationItems = {
     {
       title: "Kredi",
       href: "/kredi",
-      icon: <Credit width={28} height={28} />,
       mobileIcon: <MobileCredit />,
       subMenu: [
         {
@@ -47,7 +46,6 @@ export const DefaultDesktopNavigationItems = {
       title: "Kredi Kartları",
       href: "/kredi-karti",
       mobileIcon: <MobileCreditCard />,
-      icon: <CreditCard width={28} height={28} />,
       subMenu: [
         {
           title: "Aidatsız Kartlar",
@@ -90,11 +88,13 @@ export const DefaultDesktopNavigationItems = {
       title: "Emekli Bankacılığı",
       mobileIcon: <MobileRetirement />,
       href: "/emekli-bankaciligi",
+      badge: "Yeni",
     },
     {
       title: "Bankaların Müşterisi Ol",
       mobileIcon: <MobileOnlineBanking />,
       href: "/bankalarin-musterisi-ol",
+      badge: "Yeni",
     },
   ],
 };

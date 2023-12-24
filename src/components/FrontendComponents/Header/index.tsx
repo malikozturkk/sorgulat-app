@@ -19,13 +19,7 @@ const Header: React.FC<IHeader> = (props) => {
   const handleClick = () => {
     setShowMobileMenu(!showMobileMenu);
   };
-  const {
-    logo,
-    position,
-    desktopNavigationItems,
-    mobileNavigationItems,
-    membership,
-  } = props;
+  const { logo, position, desktopNavigationItems, membership } = props;
   return (
     <S.HeaderMain>
       {logo && (
@@ -38,10 +32,13 @@ const Header: React.FC<IHeader> = (props) => {
           <S.HeaderNav>
             {desktopNavigationItems?.items?.map((item, index) => (
               <S.HeaderNavItem
+                open={item.subMenu && subMenuOpen === index}
                 key={item.href || index}
                 onMouseEnter={() => setSubMenuOpen(index)}
                 onMouseLeave={() => setSubMenuOpen(false)}
-                style={{ backgroundColor: subMenuOpen === index && "#F7F7F8" }}
+                style={{
+                  backgroundColor: subMenuOpen === index && "#F7F7F8",
+                }}
               >
                 {item.icon && item.icon}
                 <Link
@@ -119,6 +116,11 @@ const Header: React.FC<IHeader> = (props) => {
                       ))}
                     </S.HeaderNavSubMenu>
                   </S.SubMenuContainer>
+                )}
+                {item.badge && (
+                  <S.BadgeMain>
+                    <S.Badge>{item.badge}</S.Badge>
+                  </S.BadgeMain>
                 )}
               </S.HeaderNavItem>
             ))}
