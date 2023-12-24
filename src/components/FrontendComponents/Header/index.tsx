@@ -28,7 +28,11 @@ const Header: React.FC<IHeader> = (props) => {
   } = props;
   return (
     <S.HeaderMain>
-      {logo && <Link href={logo.url}>{logo.svg}</Link>}
+      {logo && (
+        <Link href={logo.url} onClick={() => setShowMobileMenu(false)}>
+          {logo.svg}
+        </Link>
+      )}
       <S.Main>
         {!isMobile ? (
           <S.HeaderNav>
