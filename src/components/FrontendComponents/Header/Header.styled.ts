@@ -19,6 +19,57 @@ export const HeaderNav = styled.nav`
     align-items: center;
 `
 
+export const MobileHeaderContainer = styled.div`
+    display: flex;
+    align-items: center;
+`
+
+export const MobileButton = styled.button`
+    border: none;
+    background: none;
+    padding: 0;
+`
+
+export const MobileMenuMain = styled.div<{show: boolean}>`
+    position: fixed;
+    width: 100%;
+    z-index: 13;
+    inset: 80px 0px 0px;
+    height: calc(100% - 80px);
+    background-color: white;
+    color: #646ECB;
+    transform: ${(props) => props?.show ? 'translateX(0%)' : 'translateX(100%)'};
+    transition: transform 0.5s;
+`
+
+export const MobileHeaderNavItem = styled.li<{ active: boolean }>`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding-left: 16px;
+    position: relative;
+    &:not(:last-child) {
+        border-bottom: 1px solid #646ECB;
+    }
+    
+    ${props => props.active && `
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 4px;
+            height: 50px;
+            border-radius: 0px 6px 6px 0px;
+            background-color: #646ECB;
+            transition-property: width;
+            transition-duration: 0.2s;
+            transition-timing-function: ease-in-out;
+        }
+    `}
+`
+
 export const HeaderNavItem = styled.div`
     padding: 28px 12px;
     display: flex;

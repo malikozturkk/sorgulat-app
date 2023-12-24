@@ -1,5 +1,9 @@
 import CreditCard from "../../Icons/svg/credit-card.svg";
 import Credit from "../../Icons/svg/credit.svg";
+import MobileCredit from "../../Icons/svg/mobile-credit.svg";
+import MobileCreditCard from "../../Icons/svg/mobile-credit-card.svg";
+import MobileRetirement from "../../Icons/svg/retirement.svg";
+import MobileOnlineBanking from "../../Icons/svg/online-banking.svg";
 
 export const DefaultDesktopNavigationItems = {
   items: [
@@ -7,6 +11,7 @@ export const DefaultDesktopNavigationItems = {
       title: "Kredi",
       href: "/kredi",
       icon: <Credit width={28} height={28} />,
+      mobileIcon: <MobileCredit />,
       subMenu: [
         {
           title: "İhtiyaç Kredisi",
@@ -41,6 +46,7 @@ export const DefaultDesktopNavigationItems = {
     {
       title: "Kredi Kartları",
       href: "/kredi-karti",
+      mobileIcon: <MobileCreditCard />,
       icon: <CreditCard width={28} height={28} />,
       subMenu: [
         {
@@ -82,10 +88,12 @@ export const DefaultDesktopNavigationItems = {
     },
     {
       title: "Emekli Bankacılığı",
+      mobileIcon: <MobileRetirement />,
       href: "/emekli-bankaciligi",
     },
     {
       title: "Bankaların Müşterisi Ol",
+      mobileIcon: <MobileOnlineBanking />,
       href: "/bankalarin-musterisi-ol",
     },
   ],

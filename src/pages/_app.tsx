@@ -58,6 +58,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <ThemeProvider theme={theme}>
           <GlobalStyles />
           <Header
+            page={pageProps.page}
             desktopNavigationItems={DefaultDesktopNavigationItems}
             logo={{
               url: "/",
