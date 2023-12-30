@@ -6,8 +6,14 @@ import Megaphone from "../../Icons/svg/megaphone.svg";
 import Camera from "../../Icons/svg/camera.svg";
 import ArrowRight from "../../Icons/svg/arrowRight.svg";
 import QRCode from "react-qr-code";
+import { useTranslation } from "next-i18next";
+import Link from "next/link";
+import Branches from "../../Icons/svg/branches.svg";
+import Wallet from "../../Icons/svg/wallet.svg";
+import Phone from "../../Icons/svg/phone.svg";
 
 const BankCardDesktop = (props) => {
+  const { t } = useTranslation("common");
   const { item, index } = props;
   return (
     <S.CardMain key={index}>
@@ -45,6 +51,32 @@ const BankCardDesktop = (props) => {
                 </S.BenefitMain>
               ))}
             </S.Benefits>
+            <S.BankInfosMain>
+              <S.BankInfos key={index}>
+                <Branches />
+                {item.numberOfBranches === 0
+                  ? t("bankCard.noBranches")
+                  : t("bankCard.branchesText", {
+                      branches: item.numberOfBranches,
+                    })}
+              </S.BankInfos>
+              <S.BankInfos key={index}>
+                <Wallet />
+                {item.numberOfAtm === 0
+                  ? t("bankCard.noAtm")
+                  : t("bankCard.atmText", {
+                      atm: item.numberOfAtm,
+                    })}
+              </S.BankInfos>
+              <S.BankInfos key={index}>
+                <Phone />
+                <Link href={`tel: ${item.phoneNumber}`}>
+                  {t("bankCard.phone", {
+                    number: item.phoneNumber,
+                  })}
+                </Link>
+              </S.BankInfos>
+            </S.BankInfosMain>
           </S.BenefitCard>
         </S.Infos>
       </S.InfoMain>

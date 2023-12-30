@@ -33,6 +33,14 @@ const Sorted: React.FC<T.SortedProps> = (props) => {
         return b.amount - a.amount;
       } else if (key === "lowest") {
         return a.amount - b.amount;
+      } else if (key === "branchesAsc") {
+        return a.numberOfBranches - b.numberOfBranches;
+      } else if (key === "branchesDesc") {
+        return b.numberOfBranches - a.numberOfBranches;
+      } else if (key === "atmAsc") {
+        return a.numberOfAtm - b.numberOfAtm;
+      } else if (key === "atmDesc") {
+        return b.numberOfAtm - a.numberOfAtm;
       } else if (key === "bankNameAsc") {
         return a.bankName.localeCompare(b.bankName);
       } else if (key === "bankNameDesc") {

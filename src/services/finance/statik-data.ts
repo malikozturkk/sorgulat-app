@@ -8,6 +8,9 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "is-bankasi.png",
       color: "#053260",
       buttonText: "Maaşını Taşı!",
+      numberOfBranches: 1066,
+      numberOfAtm: 6500,
+      phoneNumber: "0850 724 07 24",
       priority: 100,
       amount: 7.500,
       infos: [
@@ -35,6 +38,9 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "akbank.png",
       color: "#dd0001",
       buttonText: "Maaşını Taşı!",
+      numberOfBranches: 712,
+      numberOfAtm: 5200,
+      phoneNumber: "0212 444 25 25",
       priority: 99,
       amount: 12.000,
       infos: [
@@ -63,6 +69,9 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "ing.png",
       color: "#ff6200",
       buttonText: "Maaşını Taşı!",
+      numberOfBranches: 120,
+      numberOfAtm: 500,
+      phoneNumber: "0850 222 06 00",
       priority: 98,
       amount: 12.500,
       infos: [
@@ -90,6 +99,9 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "garanti.png",
       color: "#009341",
       buttonText: "Maaşını Taşı!",
+      numberOfBranches: 810,
+      numberOfAtm: 5300,
+      phoneNumber: "444 0 333",
       priority: 97,
       amount: 8.500,
       infos: [
@@ -118,6 +130,9 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "vakif-bank.png",
       color: "#ffb300",
       buttonText: "Maaşını Taşı!",
+      numberOfBranches: 941,
+      numberOfAtm: 4000,
+      phoneNumber: "0850 222 07 24",
       priority: 96,
       amount: 5.000,
       infos: [
@@ -145,6 +160,9 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "fibabank.png",
       color: "#83bd01",
       buttonText: "Maaşını Taşı!",
+      numberOfBranches: 40,
+      numberOfAtm: 50,
+      phoneNumber: "444 88 88",
       priority: 95,
       amount: 7.500,
       infos: [
@@ -172,6 +190,9 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "halkbank.png",
       color: "#1b70b5",
       buttonText: "Maaşını Taşı!",
+      numberOfBranches: 1073,
+      numberOfAtm: 4000,
+      phoneNumber: "0850 222 04 00",
       priority: 94,
       amount: 3.000,
       infos: [
@@ -199,6 +220,9 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "albaraka.png",
       color: "#f68e1e",
       buttonText: "Maaşını Taşı!",
+      numberOfBranches: 224,
+      numberOfAtm: 8500,
+      phoneNumber: "0850 222 56 66",
       priority: 93,
       amount: 10.000,
       infos: [
@@ -226,6 +250,9 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "deniz-bank.png",
       color: "#d11241",
       buttonText: "Maaşını Taşı!",
+      numberOfBranches: 643,
+      numberOfAtm: 3000,
+      phoneNumber: "0850 222 08 00",
       priority: 92,
       amount: 5.000,
       infos: [
@@ -253,6 +280,9 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "qnb.png",
       color: "#870052",
       buttonText: "Maaşını Taşı!",
+      numberOfBranches: 435,
+      numberOfAtm: 4300,
+      phoneNumber: "0850 222 09 00",
       priority: 91,
       amount: 9.200,
       infos: [
@@ -280,6 +310,9 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "yapi-kredi.png",
       color: "#004990",
       buttonText: "Maaşını Taşı!",
+      numberOfBranches: 779,
+      numberOfAtm: 5000,
+      phoneNumber: "444 0 444",
       priority: 90,
       amount: 9.000,
       infos: [
@@ -308,6 +341,9 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "sekerbank.png",
       color: "#007a3d",
       buttonText: "Maaşını Taşı!",
+      numberOfBranches: 240,
+      numberOfAtm: 400,
+      phoneNumber: "0850 222 78 78",
       priority: 89,
       amount: 5.000,
       infos: [
@@ -335,6 +371,9 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "kuveyt-turk.png",
       color: "#006754",
       buttonText: "Maaşını Taşı!",
+      numberOfBranches: 443,
+      numberOfAtm: 1000,
+      phoneNumber: "444 0 123",
       priority: 88,
       amount: 8.000,
       infos: [
@@ -362,6 +401,9 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "ziraat-bankasi.png",
       color: "#e10514",
       buttonText: "Maaşını Taşı!",
+      numberOfBranches: 1745,
+      numberOfAtm: 7300,
+      phoneNumber: "444 00 00",
       priority: 87,
       amount: 5.000,
       infos: [
@@ -389,6 +431,9 @@ export const bankPromotionData: IBankCard[] = [
       applicationUrl: "https://www.turkiyefinans.com.tr/tr-tr/kampanyalar/sayfalar/emeklilere-nakit-promosyon.aspx",
       color: "#00c4b3",
       buttonText: "Maaşını Taşı!",
+      numberOfBranches: 316,
+      numberOfAtm: 600,
+      phoneNumber: "0850 222 22 44",
       priority: 86,
       amount: 5.000,
       infos: [
@@ -421,6 +466,9 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "akbank.png",
       color: "#dd0001",
       buttonText: "Müşteri Ol!",
+      numberOfBranches: 712,
+      numberOfAtm: 5200,
+      phoneNumber: "0212 444 25 25",
       priority: 100,
       infos: [
         "%0 faizli 20.000 TL'ye Varan Taksitli Avans!",
@@ -432,7 +480,7 @@ export const bankPromotionData: IBankCard[] = [
         },
         {
           benefit: "Tanışma Faizi",
-          value: "%47,00"
+          value: "%48,00"
         },
         {
           benefit: "Günlük Faiz",
@@ -447,6 +495,9 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "qnb.png",
       color: "#870052",
       buttonText: "Müşteri Ol!",
+      numberOfBranches: 435,
+      numberOfAtm: 4300,
+      phoneNumber: "0850 222 09 00",
       priority: 99,
       infos: [
         "%0 faiz ile 10.000 TL'ye Varan Kredi Fırsatı!",
@@ -459,7 +510,7 @@ export const bankPromotionData: IBankCard[] = [
         },
         {
           benefit: "Tanışma Faizi",
-          value: "%39,00"
+          value: "%41,50"
         },
         {
           benefit: "Günlük Faiz",
@@ -474,6 +525,9 @@ export const bankPromotionData: IBankCard[] = [
       applicationUrl: "https://www.vakifbank.com.tr/Default.aspx?pageID=3998",
       color: "#ffb300",
       buttonText: "Müşteri Ol!",
+      numberOfBranches: 941,
+      numberOfAtm: 4000,
+      phoneNumber: "0850 222 07 24",
       priority: 98,
       infos: [
         "İlk defa ARI Hesabı açtıranlara %41,00 Tanışma faizi fırsatı VakıfBank’ta."
@@ -500,6 +554,9 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "deniz-bank.png",
       color: "#d11241",
       buttonText: "Müşteri Ol!",
+      numberOfBranches: 643,
+      numberOfAtm: 3000,
+      phoneNumber: "0850 222 08 00",
       priority: 97,
       infos: [
         "%0,99 Faiz ile 10.000 TL'ye Varan Kredi!",
@@ -512,7 +569,7 @@ export const bankPromotionData: IBankCard[] = [
         },
         {
           benefit: "Tanışma Faizi",
-          value: "%47,00"
+          value: "%51,00"
         },
         {
           benefit: "Günlük Faiz",
@@ -527,10 +584,13 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "garanti.png",
       color: "#009341",
       buttonText: "Müşteri Ol!",
+      numberOfBranches: 810,
+      numberOfAtm: 5300,
+      phoneNumber: "444 0 333",
       priority: 96,
       infos: [
         "15.000 TL Faizsiz Taksitli Nakit Avans!",
-        "10.000 TL'ye Varan Faizsiz Kredi!"
+        "10.000 TL'ye Varan %0,99 Faizli Kredi!"
       ],
       benefits: [
         {
@@ -554,6 +614,9 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "yapi-kredi.png",
       color: "#004990",
       buttonText: "Müşteri Ol!",
+      numberOfBranches: 779,
+      numberOfAtm: 5000,
+      phoneNumber: "444 0 444",
       priority: 95,
       infos: [
         "%0 Faizli 20.000 TL’ye Varan Nakit Avans!",
@@ -581,10 +644,13 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "enpara.png",
       color: "#b44ea7",
       buttonText: "Müşteri Ol!",
+      numberOfBranches: 435,
+      numberOfAtm: 4300,
+      phoneNumber: "0850 222 36 63",
       priority: 94,
       infos: [
-        "Masrafsız Bankacılık için Enparalı Olun!",
-        "%0 Faiz ile 10.000 TL'ye Varan Kredi!"
+        "Sonsuza kadar ücretsiz EFT/FAST/havale ve fatura ödeme işlemleri!",
+        "Yeni Müşterilere %0 Faizli 10.000 TL Kredi!"
       ],
       benefits: [
         {
@@ -593,7 +659,7 @@ export const bankPromotionData: IBankCard[] = [
         },
         {
           benefit: "Tanışma Faizi",
-          value: "%46,50"
+          value: "%47,50"
         },
         {
           benefit: "Günlük Faiz",
@@ -608,6 +674,9 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "is-bankasi.png",
       color: "#053260",
       buttonText: "Müşteri Ol!",
+      numberOfBranches: 1066,
+      numberOfAtm: 6500,
+      phoneNumber: "0850 724 07 24",
       priority: 93,
       infos: [
         "%0 Faizli 20.000 TL Taksitli Nakit Avans!",
@@ -634,6 +703,9 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "albaraka.png",
       color: "#f68e1e",
       buttonText: "Müşteri Ol!",
+      numberOfBranches: 224,
+      numberOfAtm: 8500,
+      phoneNumber: "0850 222 56 66",
       priority: 92,
       infos: [
         "%35’e Varan Kâr Oranlı TL Katılma Hesapları!",
@@ -661,6 +733,9 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "kuveyt-turk.png",
       color: "#004638",
       buttonText: "Müşteri Ol!",
+      numberOfBranches: 443,
+      numberOfAtm: 1000,
+      phoneNumber: "444 0 123",
       priority: 91,
       infos: [
         "Vade Farksız 10.000 TL İhtiyaç Finansmanı",
@@ -688,6 +763,9 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "cepteteb.png",
       color: "#16bc5d",
       buttonText: "Müşteri Ol!",
+      numberOfBranches: 467,
+      numberOfAtm: 1700,
+      phoneNumber: "0850 200 06 66",
       priority: 90,
       infos: [
         "%40 Hoş Geldin Faizi İle Rahat Rahat Biriktir!",
@@ -714,6 +792,9 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "ing.png",
       color: "#ff6200",
       buttonText: "Müşteri Ol!",
+      numberOfBranches: 120,
+      numberOfAtm: 500,
+      phoneNumber: "0850 222 06 00",
       priority: 89,
       infos: [
         "%0,99 Yansıyan Faizle 20.000 TL’ye Kadar Kredi"
@@ -721,7 +802,7 @@ export const bankPromotionData: IBankCard[] = [
       benefits: [
         {
           benefit: "EFT Havale",
-          value: "Ücretsiz"
+          value: "Ayda 3 Kez Ücretsiz"
         },
         {
           benefit: "Tanışma Faizi",
@@ -740,6 +821,9 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "vakif-katilim.png",
       color: "#25477B",
       buttonText: "Müşteri Ol!",
+      numberOfBranches: 153,
+      numberOfAtm: 100,
+      phoneNumber: "444 4 477",
       priority: 88,
       infos: [
         "Şubeye Gitmeden Vakıf Katılım Müşterisi Olun!"
@@ -766,6 +850,9 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "alternatif-bank.png",
       color: "#8d003e",
       buttonText: "Müşteri Ol!",
+      numberOfBranches: 28,
+      numberOfAtm: 50,
+      phoneNumber: "444 0 055",
       priority: 87,
       infos: [
         "Sen de VOV'lu Ol, Kazan Bol Bol!"
@@ -777,7 +864,7 @@ export const bankPromotionData: IBankCard[] = [
         },
         {
           benefit: "Tanışma Faizi",
-          value: "%45,00"
+          value: "%47,00"
         },
         {
           benefit: "Günlük Faiz",
@@ -792,6 +879,9 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "anadolu-bank.png",
       color: "#008aff",
       buttonText: "Müşteri Ol!",
+      numberOfBranches: 116,
+      numberOfAtm: 120,
+      phoneNumber: "0850 222 5550",
       priority: 86,
       infos: [
         "Renkli Hesap ile Her Gün Kazanın!"
@@ -803,7 +893,7 @@ export const bankPromotionData: IBankCard[] = [
         },
         {
           benefit: "Tanışma Faizi",
-          value: "%44,00"
+          value: "%46,00"
         },
         {
           benefit: "Günlük Faiz",
@@ -818,9 +908,12 @@ export const bankPromotionData: IBankCard[] = [
       imageUrl: "hayat-finans.png",
       color: "#01a05f",
       buttonText: "Müşteri Ol!",
+      numberOfBranches: 0,
+      numberOfAtm: 0,
+      phoneNumber: "0850 224 29 28",
       priority: 85,
       infos: [
-        "Yıllık Brüt Kar Payı Oranı %42,45!"
+        "Yıllık Brüt Kar Payı Oranı %42,54!"
       ],
       benefits: [
         {
@@ -829,7 +922,7 @@ export const bankPromotionData: IBankCard[] = [
         },
         {
           benefit: "Katılma Hesabı",
-          value: "%42,45"
+          value: "%42,54"
         },
         {
           benefit: "Günlük Faiz",
@@ -844,6 +937,9 @@ export const bankPromotionData: IBankCard[] = [
       applicationUrl: "https://www.turkiyefinans.com.tr/tr-tr/dijital-bankacilik/sayfalar/musteri-ol.aspx",
       color: "#00c4b3",
       buttonText: "Müşteri Ol!",
+      numberOfBranches: 316,
+      numberOfAtm: 600,
+      phoneNumber: "0850 222 22 44",
       priority: 84,
       infos: [
         "Şubeye Gitmeden Vakıf Katılım Müşterisi Olun!",
@@ -870,6 +966,9 @@ export const bankPromotionData: IBankCard[] = [
       applicationUrl: "https://www.fibabanka.com/musteri-olmak-istiyorum",
       color: "#83bd01",
       buttonText: "Müşteri Ol!",
+      numberOfBranches: 40,
+      numberOfAtm: 50,
+      phoneNumber: "444 88 88",
       priority: 83,
       infos: [
         "Görüntülü Bankacılık İle Yeni Üye Olanlara %45 Kiraz Hesap Faizi!",
@@ -896,6 +995,9 @@ export const bankPromotionData: IBankCard[] = [
       applicationUrl: "https://www.hsbc.com.tr/hsbc/hsbcli-olun",
       color: "#db0011",
       buttonText: "Müşteri Ol!",
+      numberOfBranches: 44,
+      numberOfAtm: 200,
+      phoneNumber: "0850 211 01 11",
       priority: 82,
       infos: [
         "%28 Hoş Geldin Faizi İle Rahat Rahat Biriktir!",
@@ -922,6 +1024,9 @@ export const bankPromotionData: IBankCard[] = [
       applicationUrl: "https://www.odeabank.com.tr/bireysel/goruntulu-gorusme-ile-hesap-acma",
       color: "#2d353c",
       buttonText: "Müşteri Ol!",
+      numberOfBranches: 43,
+      numberOfAtm: 70,
+      phoneNumber: "444 8 444",
       priority: 81,
       infos: [
         "Dijital kanallardan yeni müşteri olanlar ek +%3 faiz oranından yararlanıyor!"
@@ -948,6 +1053,9 @@ export const bankPromotionData: IBankCard[] = [
       applicationUrl: "https://www.sekerbank.com.tr/dijital-bankacilik/musterimiz-olun",
       color: "#007a3d",
       buttonText: "Müşteri Ol!",
+      numberOfBranches: 240,
+      numberOfAtm: 400,
+      phoneNumber: "0850 222 78 78",
       priority: 80,
       infos: [
         "%27 Hoş Geldin Faizi İle Rahat Rahat Biriktir!"
@@ -974,6 +1082,9 @@ export const bankPromotionData: IBankCard[] = [
       applicationUrl: "https://www.nkolay.com/musteri-ol",
       color: "#0075eb",
       buttonText: "Müşteri Ol!",
+      numberOfBranches: 13,
+      numberOfAtm: 0,
+      phoneNumber: "0850 724 77 77",
       priority: 79,
       infos: [
         "%0 faiz ile 10.000 TL Nakit Avans!",
@@ -1001,6 +1112,9 @@ export const bankPromotionData: IBankCard[] = [
       applicationUrl: "https://on.com.tr/subeye-gitmeden-hesap-acma",
       color: "lime",
       buttonText: "Müşteri Ol!",
+      numberOfBranches: 31,
+      numberOfAtm: 30,
+      phoneNumber: "0850 222 29 10",
       priority: 78,
       infos: [
         "%0,99'dan başlayan ihtiyaç kredisi faizi!"
@@ -1027,6 +1141,9 @@ export const bankPromotionData: IBankCard[] = [
       applicationUrl: "https://www.ziraatbank.com.tr/tr/bankamiz/basin-odasi/ziraatten-yenilikler/ziraat-li-olmak-istiyorum",
       color: "#e10514",
       buttonText: "Müşteri Ol!",
+      numberOfBranches: 1745,
+      numberOfAtm: 7300,
+      phoneNumber: "444 00 00",
       priority: 77,
       infos: [
         "%33 Hoş Geldin Faizi İle Rahat Rahat Biriktir!"
@@ -1053,6 +1170,9 @@ export const bankPromotionData: IBankCard[] = [
       applicationUrl: "https://www.halkbank.com.tr/tr/dijital-bankacilik/mobil-bankacilik/musteri-olmak-istiyorum.html",
       color: "#1b70b5",
       buttonText: "Müşteri Ol!",
+      numberOfBranches: 1073,
+      numberOfAtm: 4000,
+      phoneNumber: "0850 222 04 00",
       priority: 76,
       infos: [
         "%28 Hoş Geldin Faizi İle Rahat Rahat Biriktir!"

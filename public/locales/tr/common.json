@@ -12,5 +12,12 @@
         "BTC": "BİTCOİN",
         "ETH": "ETHEREUM",
         "XU100": "BIST 100"
+    },
+    "bankCard": {
+        "branchesText": "{{branches}} Şube",
+        "noBranches": "Online Bankacılık",
+        "atmText": "{{atm}}+ ATM",
+        "noAtm": "Anlaşmalı ATM",
+        "phone": "{{phone}} Ara"
     }
 }

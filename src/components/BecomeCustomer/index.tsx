@@ -64,6 +64,22 @@ const BecomeCustomer = () => {
               key: "recommended",
             },
             {
+              name: "Şube Sayısına Göre Artan",
+              key: "branchesAsc",
+            },
+            {
+              name: "Şube Sayısına Göre Azalan",
+              key: "branchesDesc",
+            },
+            {
+              name: "ATM Sayısına Göre Artan",
+              key: "atmAsc",
+            },
+            {
+              name: "ATM Sayısına Göre Azalan",
+              key: "atmDesc",
+            },
+            {
               name: "Banka İsmine Göre (A-Z)",
               key: "bankNameAsc",
             },

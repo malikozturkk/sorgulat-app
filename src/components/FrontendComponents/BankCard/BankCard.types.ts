@@ -9,6 +9,9 @@ export interface IBankCard {
     infos: string[];
     benefits: IBefenits[];
     amount?: number;
+    numberOfBranches?: string | number
+    numberOfAtm?: string | number 
+    phoneNumber?: string
 }
 
 export interface IBefenits {

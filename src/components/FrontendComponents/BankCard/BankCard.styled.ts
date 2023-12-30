@@ -98,6 +98,24 @@ export const Benefits = styled.div`
   width: 100%;
 `
 
+export const BankInfosMain = styled.div`
+  display: flex;
+  width: 100%;
+  gap: 4px;
+`
+
+export const BankInfos = styled.div`
+  padding: 6px;
+  display: flex;
+  font-weight: 700;
+  align-items: center;
+  color: #282b30;
+  border-radius: 15px;
+  border: 1px solid #dee2e6;
+  font-size: 12px;
+  gap: 8px;
+`
+
 export const InfoItem = styled.div<{ color: string }>`
   background-color: ${props => lighten(0.45, props?.color)};
   border-radius: 8px;

@@ -63,6 +63,14 @@ const RetirementBanking = () => {
               key: "highest",
             },
             {
+              name: "Şube Sayısına Göre Azalan",
+              key: "branchesDesc",
+            },
+            {
+              name: "ATM Sayısına Göre Azalan",
+              key: "atmDesc",
+            },
+            {
               name: "Banka İsmine Göre (A-Z)",
               key: "bankNameAsc",
             },
