@@ -72,7 +72,7 @@ const BankCardDesktop = (props) => {
                 <Phone />
                 <Link href={`tel: ${item.phoneNumber}`}>
                   {t("bankCard.phone", {
-                    number: item.phoneNumber,
+                    phone: item.phoneNumber,
                   })}
                 </Link>
               </S.BankInfos>
