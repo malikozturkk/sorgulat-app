@@ -16,28 +16,28 @@ export const DefaultDesktopNavigationItems = {
           title: "İhtiyaç Kredisi",
           description:
             "İhtiyaç kredisi faiz oranlarını karşılaştırın, şubeye gitmeden hemen başvurun, size özel faiz oranlarını kaçırmayın.",
-          href: "/kredi-karti/aidatsiz-kartlar/aidatsiz-kartlar",
+          href: "/kredi/ihtiyac-kredisi",
           icon: "personal-finance-credit.svg",
         },
         {
           title: "Konut Kredisi",
           description:
             "Hayalinizdeki evi almak için en avantajlı konut kredilerini listeleyin, ev kredisi faiz oranlarını hesaplayın ve ücretsiz başvurun.",
-          href: "/kredi-karti/kredi-kartlari/mil-veren-kartlar",
+          href: "/kredi/konut-kredisi",
           icon: "housing-credit.svg",
         },
         {
           title: "Taşıt Kredisi",
           description:
             "Almak istediğiniz araba için sıfır ve ikinci el taşıt kredilerini hesaplayın, faiz oranlarını karşılaştırın ve ücretsiz başvurun.",
-          href: "/kredi-karti/puan-veren-kartlar",
+          href: "/kredi/tasit-kredisi",
           icon: "car-credit.svg",
         },
         {
           title: "Kobi Kredisi",
           description:
             "İşletmeniz için ihtiyaç duyduğunuz KOBİ ve esnaf kredilerini karşılaştırın, en avantajlısına hemen başvurun.",
-          href: "/kredi-karti/ogrenci-kartlari",
+          href: "/kredi/kobi-kredisi",
           icon: "sme-credit.svg",
         },
       ],
@@ -51,7 +51,7 @@ export const DefaultDesktopNavigationItems = {
           title: "Aidatsız Kartlar",
           description:
             "Aidatsız kredi kartlarını listeleyin, karşılaştırın ve en avantajlısına hızlıca başvurun. Aidat ücreti ödemeden rahatça kullanın.",
-          href: "/kredi-karti/aidatsiz-kartlar/aidatsiz-kartlar",
+          href: "/kredi-karti/aidatsiz-kartlar",
           icon: "free-card.svg",
         },
         {

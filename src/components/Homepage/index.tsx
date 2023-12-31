@@ -8,6 +8,7 @@ import Radio from "components/DesignSystem/Radio";
 import MarketIndices from "components/FrontendComponents/MarketIndices";
 import Container from "components/DesignSystem/Container";
 import { useIsMobile } from "hooks/useIsMobile";
+import Collapse from "components/DesignSystem/Collapse";
 
 const HomePage = () => {
   const { t } = useTranslation("common");
@@ -62,6 +63,12 @@ const HomePage = () => {
                 label="kadın"
                 checked={checkedOption === "option2"}
                 onChange={() => handleRadioChange("option2")}
+              />
+              <Collapse
+                header={({ isOpen }) => (
+                  <div>tıkla bana {isOpen ? "açık" : "kapalı"}</div>
+                )}
+                children="children"
               />
             </div>
           </div>

@@ -170,3 +170,21 @@ export const Description = styled.div`
     font-size: 12px;
     margin-top: 8px;
 `
+
+export const CollapseList = styled.ul`
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 14px;
+`
+
+export const List = styled.li`
+
+`
+
+export const CollapseMain = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+`

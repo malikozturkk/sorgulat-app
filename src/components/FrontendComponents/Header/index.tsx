@@ -9,12 +9,22 @@ import MobileMenu from "../../Icons/svg/mobile-menu.svg";
 import Close from "../../Icons/svg/close.svg";
 import ArrowRight from "../../Icons/svg/arrow-right.svg";
 import { useIsMobile } from "hooks/useIsMobile";
-import Dropdown from "components/DesignSystem/Dropdown";
+import Collapse from "components/DesignSystem/Collapse";
 
 const Header: React.FC<IHeader> = (props) => {
   const [subMenuOpen, setSubMenuOpen] = React.useState(null);
   const [subMenuItemHovered, setSubMenuItemHovered] = React.useState(null);
   const [showMobileMenu, setShowMobileMenu] = React.useState(null);
+  React.useEffect(() => {
+    if (showMobileMenu) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [showMobileMenu]);
   const isMobile = useIsMobile();
   const handleClick = () => {
     setShowMobileMenu(!showMobileMenu);
@@ -141,39 +151,67 @@ const Header: React.FC<IHeader> = (props) => {
                     const active = item.href === props.page;
                     return (
                       <S.MobileHeaderNavItem active={active} key={index}>
-                        <Link
-                          onClick={() => setShowMobileMenu(false)}
-                          href={item.href}
-                          style={{
-                            backgroundColor: "transparent",
-                            border: "none",
-                            padding: "0px",
-                            height: "50px",
-                            width: !item.subMenu && "100%",
-                            display: "flex",
-                            alignItems: "center",
-                            textDecoration: "none",
-                            gap: "20px",
-                          }}
-                        >
-                          {item.mobileIcon && item.mobileIcon}
-                          <span>{item.title}</span>
-                        </Link>
-                        {item.subMenu && (
-                          <Dropdown
-                            title={
-                              <ArrowRight
-                                fill="#363940"
-                                width="32px"
-                                height="22px"
-                                style={{
-                                  transform: "rotate(90deg)",
-                                  transition: "all 0.2s ease-in-out",
-                                  margin: "0 16px",
-                                }}
-                              />
+                        {item.subMenu ? (
+                          <Collapse
+                            header={({ isOpen }) => (
+                              <S.CollapseMain>
+                                <Link
+                                  onClick={() => setShowMobileMenu(false)}
+                                  href={item.href}
+                                  style={{
+                                    height: "50px",
+                                    display: "flex",
+                                    alignItems: "center",
+                                    gap: "20px",
+                                  }}
+                                >
+                                  {item.mobileIcon && item.mobileIcon}
+                                  <span>{item.title}</span>
+                                </Link>
+                                <ArrowRight
+                                  fill="#646ECB"
+                                  width="32px"
+                                  height="22px"
+                                  style={{
+                                    transform: isOpen
+                                      ? "rotate(270deg)"
+                                      : "rotate(90deg)",
+                                    transition: "all 0.3s ease-in-out",
+                                    margin: "0 16px",
+                                  }}
+                                />
+                              </S.CollapseMain>
+                            )}
+                            children={
+                              <S.CollapseList>
+                                {item.subMenu.map((sub) => (
+                                  <S.List>
+                                    <Link
+                                      href={sub.href}
+                                      onClick={() => setShowMobileMenu(false)}
+                                    >
+                                      {sub.title}
+                                    </Link>
+                                  </S.List>
+                                ))}
+                              </S.CollapseList>
                             }
                           />
+                        ) : (
+                          <Link
+                            onClick={() => setShowMobileMenu(false)}
+                            href={item.href}
+                            style={{
+                              height: "50px",
+                              width: "100%",
+                              display: "flex",
+                              alignItems: "center",
+                              gap: "20px",
+                            }}
+                          >
+                            {item.mobileIcon && item.mobileIcon}
+                            <span>{item.title}</span>
+                          </Link>
                         )}
                       </S.MobileHeaderNavItem>
                     );
