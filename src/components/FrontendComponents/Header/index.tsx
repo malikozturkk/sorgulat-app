@@ -182,21 +182,20 @@ const Header: React.FC<IHeader> = (props) => {
                                 />
                               </S.CollapseMain>
                             )}
-                            children={
-                              <S.CollapseList>
-                                {item.subMenu.map((sub, index) => (
-                                  <S.List key={index}>
-                                    <Link
-                                      href={sub.href}
-                                      onClick={() => setShowMobileMenu(false)}
-                                    >
-                                      {sub.title}
-                                    </Link>
-                                  </S.List>
-                                ))}
-                              </S.CollapseList>
-                            }
-                          />
+                          >
+                            <S.CollapseList>
+                              {item.subMenu.map((sub, index) => (
+                                <S.List key={index}>
+                                  <Link
+                                    href={sub.href}
+                                    onClick={() => setShowMobileMenu(false)}
+                                  >
+                                    {sub.title}
+                                  </Link>
+                                </S.List>
+                              ))}
+                            </S.CollapseList>
+                          </Collapse>
                         ) : (
                           <Link
                             onClick={() => setShowMobileMenu(false)}

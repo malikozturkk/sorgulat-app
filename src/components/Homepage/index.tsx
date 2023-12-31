@@ -68,8 +68,9 @@ const HomePage = () => {
                 header={({ isOpen }) => (
                   <div>tıkla bana {isOpen ? "açık" : "kapalı"}</div>
                 )}
-                children="children"
-              />
+              >
+                Children
+              </Collapse>
             </div>
           </div>
         </div>
