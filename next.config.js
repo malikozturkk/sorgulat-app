@@ -8,9 +8,7 @@ loadEnvConfig(projectDir)
  * @type {import('next').NextConfig}
  */
 module.exports = {
-  i18n: {
-    ...i18n,
-  },
+  i18n,
   trailingSlash: true,
   generateEtags: false,
   poweredByHeader: false,

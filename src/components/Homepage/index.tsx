@@ -11,7 +11,7 @@ import { useIsMobile } from "hooks/useIsMobile";
 import Collapse from "components/DesignSystem/Collapse";
 
 const HomePage = () => {
-  const { t } = useTranslation("common");
+  const { t } = useTranslation();
   const [checkedOption, setCheckedOption] = React.useState("");
   const handleRadioChange = (optionValue) => {
     setCheckedOption(optionValue);

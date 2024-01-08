@@ -9,6 +9,7 @@ import Header from "components/FrontendComponents/Header";
 import { DefaultDesktopNavigationItems } from "components/FrontendComponents/Header/Header.data";
 import SorgulatLogo from "../components/Icons/svg/sorgulat-logo.svg";
 import Head from "next/head";
+import StyledComponentsRegistry from "src/lib/registry";
 
 const GlobalStyles = createGlobalStyle`
 html,
@@ -55,18 +56,20 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="category" content={metaText.category} />
       </Head>
       <QueryClientProvider client={queryClient}>
-        <ThemeProvider theme={theme}>
-          <GlobalStyles />
-          <Header
-            page={pageProps.page}
-            desktopNavigationItems={DefaultDesktopNavigationItems}
-            logo={{
-              url: "/",
-              svg: <SorgulatLogo />,
-            }}
-          />
-          <Component {...pageProps} />
-        </ThemeProvider>
+        <StyledComponentsRegistry>
+          <ThemeProvider theme={theme}>
+            <GlobalStyles />
+            <Header
+              page={pageProps.page}
+              desktopNavigationItems={DefaultDesktopNavigationItems}
+              logo={{
+                url: "/",
+                svg: <SorgulatLogo />,
+              }}
+            />
+            <Component {...pageProps} />
+          </ThemeProvider>
+        </StyledComponentsRegistry>
       </QueryClientProvider>
     </>
   );

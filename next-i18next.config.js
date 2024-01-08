@@ -14,5 +14,4 @@ module.exports = {
   fallbackLng: {
     default: ['tr'],
   },
-  
 }
