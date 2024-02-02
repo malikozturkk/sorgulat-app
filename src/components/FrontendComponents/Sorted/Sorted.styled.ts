@@ -9,7 +9,7 @@ export const Main = styled.div`
   }
 `
 
-export const SortedMain = styled.div<{hover: boolean, open: boolean}>`
+export const SortedMain = styled.button<{hover: boolean, open: boolean}>`
   padding: 12px 20px;
   border: 1px solid ${(props) => props?.hover || props?.open  ? '#646ECB' : '#d8dade'};
   transition: all 0.2s ease-in-out 0s;

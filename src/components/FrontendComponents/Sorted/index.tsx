@@ -13,18 +13,20 @@ const Sorted: React.FC<T.SortedProps> = (props) => {
   const { defaultValue, defaultKey, lists, data, setSortedData, isLoading } =
     props;
   const [selected, setSelected] = React.useState(defaultValue);
+  const toggleOpen = () => setOpen(!open);
 
   React.useEffect(() => {
-    const checkIfClickedOutside = (e) => {
-      open && ref.current && !ref.current.contains(e.target)
-        ? setOpen((oldState) => !oldState)
-        : null;
+    const handleClickOutside = (event) => {
+      if (ref.current && !ref.current.contains(event.target)) {
+        setOpen(false);
+      }
     };
-    document.addEventListener("mousedown", checkIfClickedOutside);
+
+    document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      document.removeEventListener("mousedown", checkIfClickedOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [open]);
+  }, [ref]);
 
   const handleSelected = (e: T.SortList) => {
     setSelected(e.name);
@@ -66,9 +68,9 @@ const Sorted: React.FC<T.SortedProps> = (props) => {
           height="45px"
         />
       ) : (
-        <>
+        <div ref={ref}>
           <S.SortedMain
-            onClick={() => setOpen(!open)}
+            onClick={toggleOpen}
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
             hover={hover}
@@ -86,7 +88,7 @@ const Sorted: React.FC<T.SortedProps> = (props) => {
             />
           </S.SortedMain>
           {open && (
-            <S.SortedLists ref={ref}>
+            <S.SortedLists>
               {lists.map((list, index) => (
                 <S.List onClick={() => handleSelected(list)} key={index}>
                   {list.name}
@@ -94,7 +96,7 @@ const Sorted: React.FC<T.SortedProps> = (props) => {
               ))}
             </S.SortedLists>
           )}
-        </>
+        </div>
       )}
     </S.Main>
   );
