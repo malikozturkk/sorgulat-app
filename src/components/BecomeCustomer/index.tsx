@@ -16,7 +16,7 @@ const eytBankCard = async () => {
 };
 
 const BecomeCustomer = () => {
-  const { data, isLoading } = useQuery("BankCard", eytBankCard);
+  let { data, isLoading } = useQuery("BankCard", eytBankCard);
   const [sortedData, setSortedData] = React.useState(null);
   const IsMobile = useIsMobile();
   React.useEffect(() => {
@@ -38,13 +38,23 @@ const BecomeCustomer = () => {
               },
             ]}
           />
+          <S.Title>
+            {isLoading ? (
+              <SkeletonLoader
+                repeat={1}
+                width={IsMobile ? "100%" : "560px"}
+                height="28px"
+              />
+            ) : (
+              "Şubeye Gitmeden Banka Hesabı Açın!"
+            )}
+          </S.Title>
           {isLoading ? (
-            <SkeletonLoader repeat={1} width="560px" height="28px" />
-          ) : (
-            <S.Title>Şubeye Gitmeden Banka Hesabı Açın!</S.Title>
-          )}
-          {isLoading ? (
-            <SkeletonLoader repeat={1} width="560px" height="48px" />
+            <SkeletonLoader
+              repeat={1}
+              width={IsMobile ? "100%" : "560px"}
+              height="48px"
+            />
           ) : (
             <S.Description>
               Sorgulat ile şubeye gitmeden bankaları karşılaştır ve seçtiğin
@@ -90,10 +100,19 @@ const BecomeCustomer = () => {
           ]}
         />
       </S.Container>
-      <p style={{ margin: !IsMobile && 0 }}>
-        {'"'}Bankaların Müşterisi Ol{'"'} araması için{" "}
-        <b>{sortedData && sortedData.length}</b> sonuç listeleniyor
-      </p>
+      {isLoading ? (
+        <SkeletonLoader
+          repeat={1}
+          width={IsMobile ? "100%" : "560px"}
+          height="20px"
+          margin="16px 0"
+        />
+      ) : (
+        <p style={{ margin: !IsMobile && 0 }}>
+          {'"'}Bankaların Müşterisi Ol{'"'} araması için{" "}
+          <b>{sortedData && sortedData.length}</b> sonuç listeleniyor
+        </p>
+      )}
       <BankCard data={sortedData ? sortedData : data} isLoading={isLoading} />
     </Container>
   );

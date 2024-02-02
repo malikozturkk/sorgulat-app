@@ -8,6 +8,7 @@ import { API } from "services/finance";
 import { useQuery } from "react-query";
 import Sorted from "components/FrontendComponents/Sorted";
 import BreadCrumb from "components/FrontendComponents/BreadCrumb";
+import SkeletonLoader from "components/FrontendComponents/MarketIndices/SkeletonLoader";
 
 const eytBankCard = async () => {
   const response = await API.get<IBankCard[]>("/api/v1/eyt-bank-promotion");
@@ -15,7 +16,7 @@ const eytBankCard = async () => {
 };
 
 const RetirementBanking = () => {
-  const { data, isLoading } = useQuery("BankCard", eytBankCard);
+  let { data, isLoading } = useQuery("BankCard", eytBankCard);
   const [sortedData, setSortedData] = React.useState(null);
   const IsMobile = useIsMobile();
   React.useEffect(() => {
@@ -26,6 +27,7 @@ const RetirementBanking = () => {
       <S.Container>
         <S.Info>
           <BreadCrumb
+            isLoading={isLoading}
             data={[
               {
                 href: "/",
@@ -37,17 +39,34 @@ const RetirementBanking = () => {
             ]}
           />
           <S.Title>
-            Bankaların Emeklilik Promosyon ve Avantajlarını Karşılaştır
+            {isLoading ? (
+              <SkeletonLoader
+                repeat={1}
+                width={IsMobile ? "100%" : "560px"}
+                height="56px"
+              />
+            ) : (
+              "Bankaların Emeklilik Promosyon ve Avantajlarını Karşılaştır"
+            )}
           </S.Title>
-          <S.Description>
-            Bankaların Emekli Bankacılığı ürünlerine Sorgulat ile ulaşın,
-            karşılaştırın ve en avantajlısına hemen başvurun!
-          </S.Description>
+          {isLoading ? (
+            <SkeletonLoader
+              repeat={1}
+              width={IsMobile ? "100%" : "560px"}
+              height="48px"
+            />
+          ) : (
+            <S.Description>
+              Bankaların Emekli Bankacılığı ürünlerine Sorgulat ile ulaşın,
+              karşılaştırın ve en avantajlısına hemen başvurun!
+            </S.Description>
+          )}
         </S.Info>
         <Sorted
           defaultValue="Önerilen Sıralama"
           defaultKey="recommended"
           data={sortedData}
+          isLoading={isLoading}
           setSortedData={setSortedData}
           lists={[
             {
@@ -81,10 +100,19 @@ const RetirementBanking = () => {
           ]}
         />
       </S.Container>
-      <p style={{ margin: !IsMobile && 0 }}>
-        {'"'}Emekli Bankacılığı{'"'} araması için{" "}
-        <b>{sortedData && sortedData.length}</b> sonuç listeleniyor
-      </p>
+      {isLoading ? (
+        <SkeletonLoader
+          repeat={1}
+          width={IsMobile ? "100%" : "560px"}
+          margin="16px 0"
+          height="20px"
+        />
+      ) : (
+        <p style={{ margin: !IsMobile && 0 }}>
+          {'"'}Emekli Bankacılığı{'"'} araması için{" "}
+          <b>{sortedData && sortedData.length}</b> sonuç listeleniyor
+        </p>
+      )}
       <BankCard data={sortedData ? sortedData : data} isLoading={isLoading} />
     </Container>
   );

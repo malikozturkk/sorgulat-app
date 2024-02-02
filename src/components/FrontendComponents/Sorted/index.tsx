@@ -3,10 +3,12 @@ import * as S from "./Sorted.styled";
 import * as T from "./Sorted.types";
 import ArrowRight from "../../Icons/svg/arrow-right.svg";
 import SkeletonLoader from "../MarketIndices/SkeletonLoader";
+import { useIsMobile } from "hooks/useIsMobile";
 
 const Sorted: React.FC<T.SortedProps> = (props) => {
   const [open, setOpen] = React.useState(false);
   const [hover, setHover] = React.useState(false);
+  const IsMobile = useIsMobile();
   const ref: React.RefObject<HTMLDivElement> | any = React.useRef();
   const { defaultValue, defaultKey, lists, data, setSortedData, isLoading } =
     props;
@@ -55,36 +57,44 @@ const Sorted: React.FC<T.SortedProps> = (props) => {
     setOpen(false);
   };
 
-  return isLoading ? (
-    <SkeletonLoader repeat={1} width="210px" height="45px" />
-  ) : (
+  return (
     <S.Main>
-      <S.SortedMain
-        onClick={() => setOpen(!open)}
-        onMouseEnter={() => setHover(true)}
-        onMouseLeave={() => setHover(false)}
-        hover={hover}
-        open={open}
-      >
-        <span>{selected}</span>
-        <ArrowRight
-          fill={hover || open ? "#646ECB" : "#848a97"}
-          width={14}
-          height={14}
-          style={{
-            transition: "all 0.2s ease-in-out 0s",
-            transform: open ? "rotate(270deg)" : "rotate(90deg)",
-          }}
+      {isLoading ? (
+        <SkeletonLoader
+          repeat={1}
+          width={IsMobile ? "100%" : "212px"}
+          height="45px"
         />
-      </S.SortedMain>
-      {open && (
-        <S.SortedLists ref={ref}>
-          {lists.map((list, index) => (
-            <S.List onClick={() => handleSelected(list)} key={index}>
-              {list.name}
-            </S.List>
-          ))}
-        </S.SortedLists>
+      ) : (
+        <>
+          <S.SortedMain
+            onClick={() => setOpen(!open)}
+            onMouseEnter={() => setHover(true)}
+            onMouseLeave={() => setHover(false)}
+            hover={hover}
+            open={open}
+          >
+            <span>{selected}</span>
+            <ArrowRight
+              fill={hover || open ? "#646ECB" : "#848a97"}
+              width={14}
+              height={14}
+              style={{
+                transition: "all 0.2s ease-in-out 0s",
+                transform: open ? "rotate(270deg)" : "rotate(90deg)",
+              }}
+            />
+          </S.SortedMain>
+          {open && (
+            <S.SortedLists ref={ref}>
+              {lists.map((list, index) => (
+                <S.List onClick={() => handleSelected(list)} key={index}>
+                  {list.name}
+                </S.List>
+              ))}
+            </S.SortedLists>
+          )}
+        </>
       )}
     </S.Main>
   );

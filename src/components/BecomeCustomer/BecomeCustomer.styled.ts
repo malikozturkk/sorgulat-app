@@ -15,6 +15,7 @@ export const Info = styled.div`
   @media (max-width: 768px) {
     margin: 16px 0;
     max-width: 100%;
+    width: 100%;
   }
 `
 

@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 import { darken, lighten } from 'polished';
 
-export const BankCardMain = styled.div`
+export const BankCardMain = styled.div<{isLoading?: string}>`
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 0 16px;
+  padding: ${(props) => props?.isLoading ? '0' : '0 16px'};
   margin-top: 8px;
 `
 

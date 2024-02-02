@@ -12,8 +12,13 @@ const shimmer = keyframes`
   }
 `;
 
-const SkeletonLoaderContainer = styled.div<{ width: string; height: string }>`
+const SkeletonLoaderContainer = styled.div<{
+  width: string;
+  height: string;
+  margin: string;
+}>`
   display: block;
+  margin: ${(props) => props?.margin};
   width: ${(props) => props?.width};
   height: ${(props) => props?.height};
   overflow: hidden;
@@ -39,16 +44,23 @@ interface SkeletonProps {
   repeat?: number;
   height?: string;
   width?: string;
+  margin?: string;
 }
 
 const SkeletonLoader: React.FC<SkeletonProps> = ({
   repeat = 1,
   width = "100%",
+  margin = "0",
   height = "62.5px",
 }) => (
   <>
     {Array.from({ length: repeat }, (_, index) => (
-      <SkeletonLoaderContainer key={index} width={width} height={height} />
+      <SkeletonLoaderContainer
+        key={index}
+        width={width}
+        height={height}
+        margin={margin}
+      />
     ))}
   </>
 );
