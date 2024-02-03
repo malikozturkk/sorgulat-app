@@ -10,8 +10,7 @@ const Sorted: React.FC<T.SortedProps> = (props) => {
   const [hover, setHover] = React.useState(false);
   const IsMobile = useIsMobile();
   const ref: React.RefObject<HTMLDivElement> | any = React.useRef();
-  const { defaultValue, defaultKey, lists, data, setSortedData, isLoading } =
-    props;
+  const { defaultValue, lists, data, setSortedData, isLoading } = props;
   const [selected, setSelected] = React.useState(defaultValue);
   const toggleOpen = () => setOpen(!open);
 
@@ -55,6 +54,7 @@ const Sorted: React.FC<T.SortedProps> = (props) => {
     };
 
     const sorted = [...data].sort(compareFunction);
+    console.log(sorted, "sorted bu");
     setSortedData(sorted);
     setOpen(false);
   };

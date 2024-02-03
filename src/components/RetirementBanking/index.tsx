@@ -64,7 +64,6 @@ const RetirementBanking = () => {
         </S.Info>
         <Sorted
           defaultValue="Önerilen Sıralama"
-          defaultKey="recommended"
           data={sortedData}
           isLoading={isLoading}
           setSortedData={setSortedData}

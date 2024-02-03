@@ -64,7 +64,6 @@ const BecomeCustomer = () => {
         </S.Info>
         <Sorted
           defaultValue="Önerilen Sıralama"
-          defaultKey="recommended"
           data={sortedData}
           setSortedData={setSortedData}
           isLoading={isLoading}
