@@ -9,10 +9,12 @@ import MarketIndices from "components/FrontendComponents/MarketIndices";
 import Container from "components/DesignSystem/Container";
 import { useIsMobile } from "hooks/useIsMobile";
 import Collapse from "components/DesignSystem/Collapse";
+import Dialog from "components/DesignSystem/Dialog";
 
 const HomePage = () => {
   const { t } = useTranslation();
   const [checkedOption, setCheckedOption] = React.useState("");
+  const [show, setShow] = React.useState(false);
   const handleRadioChange = (optionValue) => {
     setCheckedOption(optionValue);
   };
@@ -71,6 +73,18 @@ const HomePage = () => {
               >
                 Children
               </Collapse>
+            </div>
+            <div>
+              <Button
+                onClick={() => setShow(!show)}
+                text="dialog için tıkla"
+                size="small"
+                shape="default"
+                palette="red"
+              />
+              <Dialog title="Sırala" open={show} onClose={() => setShow(false)}>
+                children burası
+              </Dialog>
             </div>
           </div>
         </div>
