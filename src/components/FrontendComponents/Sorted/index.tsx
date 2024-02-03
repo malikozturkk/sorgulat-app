@@ -114,14 +114,13 @@ const Sorted: React.FC<T.SortedProps> = (props) => {
               }
             >
               {lists.map((list, index) => (
-                <S.RadioMain>
+                <S.RadioMain key={index}>
                   <Radio
                     label={list.name}
                     onChange={() => {
                       handleSelected(list);
                       setShow(false);
                     }}
-                    key={index}
                     checked={list.name === selected}
                     checkedColor="#646ECB"
                   ></Radio>
