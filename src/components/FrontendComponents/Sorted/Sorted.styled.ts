@@ -19,8 +19,11 @@ export const SortedMain = styled.button<{hover: boolean, open: boolean}>`
   align-items: center;
   gap: 10px;
   justify-content: space-between;
-  min-width: 170px;
+  min-width: 212px;
   border-radius: ${(props) => props?.open ? '8px 8px 0 0' : '8px'};
+  @media (max-width: 768px) { 
+    width: 100%;
+  }
 `
 
 export const SortedLists = styled.ul`
