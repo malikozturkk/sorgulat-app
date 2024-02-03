@@ -26,6 +26,11 @@ export const SortedMain = styled.button<{hover: boolean, open: boolean}>`
   }
 `
 
+export const RadioMain = styled.div`
+  padding: 12px 0;
+  border-bottom: 1px solid rgb(230 230 230)
+`
+
 export const SortedLists = styled.ul`
   margin: 0;
   padding: 0;

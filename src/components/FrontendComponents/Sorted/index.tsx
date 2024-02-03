@@ -4,15 +4,25 @@ import * as T from "./Sorted.types";
 import ArrowRight from "../../Icons/svg/arrow-right.svg";
 import SkeletonLoader from "../MarketIndices/SkeletonLoader";
 import { useIsMobile } from "hooks/useIsMobile";
+import Dialog from "components/DesignSystem/Dialog";
+import Radio from "components/DesignSystem/Radio";
+import Button from "components/DesignSystem/Button";
 
 const Sorted: React.FC<T.SortedProps> = (props) => {
   const [open, setOpen] = React.useState(false);
+  const [show, setShow] = React.useState(false);
   const [hover, setHover] = React.useState(false);
   const IsMobile = useIsMobile();
   const ref: React.RefObject<HTMLDivElement> | any = React.useRef();
   const { defaultValue, lists, data, setSortedData, isLoading } = props;
   const [selected, setSelected] = React.useState(defaultValue);
-  const toggleOpen = () => setOpen(!open);
+  const toggleOpen = () => {
+    if (IsMobile) {
+      setShow(true);
+    } else {
+      setOpen(!open);
+    }
+  };
 
   React.useEffect(() => {
     const handleClickOutside = (event) => {
@@ -87,7 +97,38 @@ const Sorted: React.FC<T.SortedProps> = (props) => {
               }}
             />
           </S.SortedMain>
-          {open && (
+          {show && IsMobile ? (
+            <Dialog
+              title="Sırala"
+              open={show}
+              onClose={() => setShow(false)}
+              footer={
+                <Button
+                  text="Kapat"
+                  size="default"
+                  shape="default"
+                  onClick={() => setShow(false)}
+                  block={true}
+                  palette="rgb(100, 110, 203)"
+                />
+              }
+            >
+              {lists.map((list, index) => (
+                <S.RadioMain>
+                  <Radio
+                    label={list.name}
+                    onChange={() => {
+                      handleSelected(list);
+                      setShow(false);
+                    }}
+                    key={index}
+                    checked={list.name === selected}
+                    checkedColor="#646ECB"
+                  ></Radio>
+                </S.RadioMain>
+              ))}
+            </Dialog>
+          ) : open && !IsMobile ? (
             <S.SortedLists>
               {lists.map((list, index) => (
                 <S.List onClick={() => handleSelected(list)} key={index}>
@@ -95,7 +136,7 @@ const Sorted: React.FC<T.SortedProps> = (props) => {
                 </S.List>
               ))}
             </S.SortedLists>
-          )}
+          ) : null}
         </div>
       )}
     </S.Main>
