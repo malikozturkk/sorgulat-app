@@ -78,6 +78,9 @@ export const StyledButton = styled.button<{ shape: 'default' | 'ghost' | 'outlin
     background-color: ${props => lighten(0.465, props?.palette ?? 'black') };
     color: ${props => lighten(0.30, props?.palette ?? 'black') };
   }
+  &:focus {
+    background-color: ${props => props?.shape === 'default' ? darken(0.07, props?.palette ?? 'black') : lighten(0.465, props?.palette ?? 'black') };
+  }
   &:not(:disabled):hover {
     background-color: ${props => props?.shape === 'default' ? darken(0.07, props?.palette ?? 'black') : lighten(0.465, props?.palette ?? 'black') };
     border-color: ${props => (props?.palette ?? 'black')};
