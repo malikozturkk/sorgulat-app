@@ -99,6 +99,7 @@ const Sorted: React.FC<T.SortedProps> = (props) => {
           </S.SortedMain>
           {show && IsMobile ? (
             <Dialog
+              variant="bottom"
               title="Sırala"
               open={show}
               onClose={() => setShow(false)}

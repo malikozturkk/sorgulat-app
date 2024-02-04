@@ -82,7 +82,12 @@ const HomePage = () => {
                 shape="default"
                 palette="#646ECB"
               />
-              <Dialog title="Sırala" open={show} onClose={() => setShow(false)}>
+              <Dialog
+                title="Sırala"
+                open={show}
+                variant="bottom"
+                onClose={() => setShow(false)}
+              >
                 children burası
               </Dialog>
             </div>

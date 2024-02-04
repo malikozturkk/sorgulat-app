@@ -6,7 +6,7 @@ import * as S from "./Dialog.styled";
 import Button from "../Button";
 
 const Dialog = (props: IDialog) => {
-  const { title, open, onClose, footer, children } = props;
+  const { title, open, onClose, footer, children, variant = "default" } = props;
   const [mounted, setMounted] = React.useState(false);
 
   React.useEffect(() => {
@@ -59,8 +59,8 @@ const Dialog = (props: IDialog) => {
             <S.Backdrop onClick={onClose} />
           </S.BackdropMain>
           <S.ContentMain>
-            <S.ChildrenMain>
-              <S.Children>
+            <S.ChildrenMain variant={variant}>
+              <S.Children variant={variant}>
                 <S.TitleMain>
                   <S.Title>{title}</S.Title>
                 </S.TitleMain>

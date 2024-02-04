@@ -1,4 +1,36 @@
 import styled from 'styled-components';
+import { variant } from 'styled-system';
+
+export const dialogChildrenMainVariants = () => {
+    return {
+        default: {
+            top: "50%",
+            transform: "translateY(-50%)",
+        },
+        bottom: {
+            transform: "translateY(0px)",
+            bottom: "0px",
+            top: "initial",
+        }
+    }
+}
+
+export const dialogChildrenVariants = () => {
+    return {
+        default: {
+            width: "520px",
+            borderRadius: "8px",
+
+        },
+        bottom: {
+            width: "100%",
+            borderRadius: "8px 8px 0px 0px",
+            bottom: "0px",
+            top: "auto",
+            height: "auto",
+        }
+    }
+}
 
 export const Main = styled.div`
     position: relative;
@@ -29,7 +61,8 @@ export const ContentMain = styled.div`
     height: 100%;
 `
 
-export const ChildrenMain = styled.div`
+export const ChildrenMain = styled.div<{variant?: "default" | "bottom" }>`
+    ${props => variant({ prop: 'variant', variants: dialogChildrenMainVariants() })}
     opacity: 1;
     position: fixed;
     z-index: 10;
@@ -43,18 +76,15 @@ export const ChildrenMain = styled.div`
     transition-duration: 0.1s;
     transition-timing-function: ease-in-out;
     transform-origin: 50% 50%;
-    top: 50%;
-    transform: translateY(-50%);
 `
 
-export const Children = styled.div`
+export const Children = styled.div<{variant?: "default" | "bottom" }>`
+    ${props => variant({ prop: 'variant', variants: dialogChildrenVariants() })}
     background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
-    width: 520px;
     max-width: 100%;
     margin: 0px auto;
-    border-radius: 8px;
     min-height: 160px;
     position: relative;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 9px 46px 8px;
