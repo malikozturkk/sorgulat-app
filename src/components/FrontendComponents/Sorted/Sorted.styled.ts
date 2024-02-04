@@ -11,6 +11,7 @@ export const Main = styled.div`
 
 export const SortedMain = styled.button<{hover: boolean, open: boolean}>`
   padding: 12px 20px;
+  color: #363940;
   border: 1px solid ${(props) => props?.hover || props?.open  ? '#646ECB' : '#d8dade'};
   transition: all 0.2s ease-in-out 0s;
   background-color: #fff;
@@ -28,7 +29,7 @@ export const SortedMain = styled.button<{hover: boolean, open: boolean}>`
 
 export const RadioMain = styled.div`
   padding: 12px 0;
-  border-bottom: 1px solid rgb(230 230 230)
+  border-bottom: 1px solid rgb(230 230 230);
 `
 
 export const SortedLists = styled.ul`
