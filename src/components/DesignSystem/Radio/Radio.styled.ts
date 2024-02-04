@@ -88,10 +88,10 @@ export const StyledRadio = styled.span<{ checked: boolean, checkedColor: ColorVa
     border-image: initial;
     transition: color 0.2s ease 0s, border-color ease 0s, width ease 0s, height ease 0s, background-color ease 0s;
   }
-  border-color: ${props => (props?.checked ? (props?.checkedColor ?? 'rgb(45, 196, 77)') : props?.hover && 'rgb(114, 126, 124)' )};
+  border-color: ${props => (props?.checked ? (props?.checkedColor ?? '#646ECB') : props?.hover && 'rgb(114, 126, 124)' )};
   color: ${props => (props?.checked && (props?.color ?? '#fff'))};
   &::before {
-    background-color: ${props => (props?.checked && (props?.checkedColor ?? 'rgb(45, 196, 77)'))};
+    background-color: ${props => (props?.checked && (props?.checkedColor ?? '#646ECB'))};
   }
   ${props => props?.checked &&`
     &::before {

@@ -46,8 +46,8 @@ export const StyledCheckbox = styled.span<{ checked: boolean, checkedColor: Colo
     transform: translate(-50%, -50%);
     transform-origin: 50% 50%;
   }
-  border-color: ${props => (props?.checked ? (props?.checkedColor ?? 'rgb(45, 196, 77)') : props?.hover && 'rgb(114, 126, 124)' )};
-  background-color: ${props => (props?.checked && (props?.checkedColor ?? 'rgb(45, 196, 77)'))};
+  border-color: ${props => (props?.checked ? (props?.checkedColor ?? '#646ECB') : props?.hover && 'rgb(114, 126, 124)' )};
+  background-color: ${props => (props?.checked && (props?.checkedColor ?? '#646ECB'))};
   color: ${props => (props?.checked && (props?.color ?? '#fff'))};
   ${props => props?.checked &&`
     &::before {

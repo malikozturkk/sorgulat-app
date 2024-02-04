@@ -80,7 +80,7 @@ const HomePage = () => {
                 text="dialog için tıkla"
                 size="small"
                 shape="default"
-                palette="red"
+                palette="#646ECB"
               />
               <Dialog title="Sırala" open={show} onClose={() => setShow(false)}>
                 children burası
